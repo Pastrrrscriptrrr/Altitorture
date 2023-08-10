@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
 ]=]
 
--- Instances: 109 | Scripts: 26 | Modules: 0
+-- Instances: 112 | Scripts: 27 | Modules: 0
 local G2L = {};
 
 -- StarterGui.Keysystm
@@ -19,9 +19,9 @@ G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
-G2L["2"]["Size"] = UDim2.new(0, 293, 0, 309);
+G2L["2"]["Size"] = UDim2.new(0, 293, 0, 362);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Position"] = UDim2.new(0.3632119596004486, 0, 0.25396835803985596, 0);
+G2L["2"]["Position"] = UDim2.new(0.3632119596004486, 0, 0.16984136402606964, 0);
 
 -- StarterGui.Keysystm.Frame.UICorner
 G2L["3"] = Instance.new("UICorner", G2L["2"]);
@@ -380,6 +380,7 @@ G2L["2c"]["Name"] = [[Divider]];
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display
 G2L["2d"] = Instance.new("Frame", G2L["18"]);
+G2L["2d"]["Active"] = true;
 G2L["2d"]["BorderSizePixel"] = 0;
 G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2d"]["BackgroundTransparency"] = 1;
@@ -395,7 +396,6 @@ G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2e"]["BackgroundTransparency"] = 1;
 G2L["2e"]["Size"] = UDim2.new(0, 545, 0, 300);
 G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2e"]["Visible"] = false;
 G2L["2e"]["Name"] = [[Game]];
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Game.TextLabel
@@ -445,7 +445,7 @@ G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]
 G2L["32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["32"]["Size"] = UDim2.new(0, 239, 0, 26);
 G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["32"]["Text"] = [[Disable music - ❌]];
+G2L["32"]["Text"] = [[Delete The anticheat]];
 G2L["32"]["Position"] = UDim2.new(0, 0, 0.021641947329044342, 0);
 G2L["32"]["BackgroundTransparency"] = 1;
 
@@ -465,7 +465,7 @@ G2L["34"]["TextSize"] = 14;
 G2L["34"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["34"]["Size"] = UDim2.new(0, 296, 0, 33);
 G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["34"]["Text"] = [[Disables/enables the ambience music in the game.]];
+G2L["34"]["Text"] = [[Get rid of the anti-cheat]];
 G2L["34"]["BackgroundTransparency"] = 1;
 G2L["34"]["Position"] = UDim2.new(0.9601759910583496, 0, -0.1538461595773697, 0);
 
@@ -678,227 +678,227 @@ G2L["45"]["Text"] = [[Teleports you 400M up]];
 G2L["45"]["BackgroundTransparency"] = 1;
 G2L["45"]["Position"] = UDim2.new(0.9559918642044067, 0, -0.1538461595773697, 0);
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Game.TextButton
-G2L["46"] = Instance.new("TextButton", G2L["2e"]);
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Game.ScrollingFrame.TextButton
+G2L["46"] = Instance.new("TextButton", G2L["31"]);
 G2L["46"]["TextWrapped"] = true;
 G2L["46"]["BorderSizePixel"] = 0;
 G2L["46"]["RichText"] = true;
+G2L["46"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["46"]["TextScaled"] = true;
-G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["46"]["TextSize"] = 14;
 G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["46"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["46"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["Size"] = UDim2.new(0, 239, 0, 26);
 G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["46"]["Text"] = [[X]];
-G2L["46"]["Position"] = UDim2.new(0.6495224833488464, 0, -0.009999999776482582, 0);
+G2L["46"]["Text"] = [[Teleport to 0M]];
+G2L["46"]["Position"] = UDim2.new(0.0036630036775022745, 0, 0.6731321811676025, 0);
 G2L["46"]["BackgroundTransparency"] = 1;
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Game.TextButton.LocalScript
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Game.ScrollingFrame.TextButton.LocalScript
 G2L["47"] = Instance.new("LocalScript", G2L["46"]);
 
 
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Game.ScrollingFrame.TextButton.TextLabel
+G2L["48"] = Instance.new("TextLabel", G2L["46"]);
+G2L["48"]["TextWrapped"] = true;
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["RichText"] = true;
+G2L["48"]["TextScaled"] = true;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["48"]["TextSize"] = 14;
+G2L["48"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["48"]["Size"] = UDim2.new(0, 297, 0, 33);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Text"] = [[Teleports you back down]];
+G2L["48"]["BackgroundTransparency"] = 1;
+G2L["48"]["Position"] = UDim2.new(0.9559918642044067, 0, -0.1538461595773697, 0);
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Game.TextButton
+G2L["49"] = Instance.new("TextButton", G2L["2e"]);
+G2L["49"]["TextWrapped"] = true;
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["RichText"] = true;
+G2L["49"]["TextScaled"] = true;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["49"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["49"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[X]];
+G2L["49"]["Position"] = UDim2.new(0.6495224833488464, 0, -0.009999999776482582, 0);
+G2L["49"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Game.TextButton.LocalScript
+G2L["4a"] = Instance.new("LocalScript", G2L["49"]);
+
+
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Game.LocalScript
-G2L["48"] = Instance.new("LocalScript", G2L["2e"]);
+G2L["4b"] = Instance.new("LocalScript", G2L["2e"]);
 
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player
-G2L["49"] = Instance.new("Frame", G2L["2d"]);
-G2L["49"]["BorderSizePixel"] = 0;
-G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["49"]["BackgroundTransparency"] = 1;
-G2L["49"]["Size"] = UDim2.new(0, 545, 0, 300);
-G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["Visible"] = false;
-G2L["49"]["Name"] = [[Player]];
-
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.TextLabel
-G2L["4a"] = Instance.new("TextLabel", G2L["49"]);
-G2L["4a"]["TextWrapped"] = true;
-G2L["4a"]["BorderSizePixel"] = 0;
-G2L["4a"]["TextScaled"] = true;
-G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["4a"]["TextSize"] = 14;
-G2L["4a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4a"]["Size"] = UDim2.new(0, 200, 0, 50);
-G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4a"]["Text"] = [[Player 🧑]];
-G2L["4a"]["BackgroundTransparency"] = 1;
-G2L["4a"]["Position"] = UDim2.new(0.315596342086792, 0, -0.009999999776482582, 0);
-
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.Divider
-G2L["4b"] = Instance.new("Frame", G2L["49"]);
-G2L["4b"]["BorderSizePixel"] = 0;
-G2L["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4b"]["Size"] = UDim2.new(0, 546, 0, 2);
-G2L["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4b"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.15333333611488342, 0);
-G2L["4b"]["Name"] = [[Divider]];
-
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame
-G2L["4c"] = Instance.new("ScrollingFrame", G2L["49"]);
-G2L["4c"]["Active"] = true;
+G2L["4c"] = Instance.new("Frame", G2L["2d"]);
 G2L["4c"]["BorderSizePixel"] = 0;
 G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["4c"]["BackgroundTransparency"] = 1;
-G2L["4c"]["Size"] = UDim2.new(0, 546, 0, 251);
+G2L["4c"]["Size"] = UDim2.new(0, 545, 0, 300);
 G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.1599999964237213, 0);
+G2L["4c"]["Visible"] = false;
+G2L["4c"]["Name"] = [[Player]];
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton
-G2L["4d"] = Instance.new("TextButton", G2L["4c"]);
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.TextLabel
+G2L["4d"] = Instance.new("TextLabel", G2L["4c"]);
 G2L["4d"]["TextWrapped"] = true;
 G2L["4d"]["BorderSizePixel"] = 0;
-G2L["4d"]["RichText"] = true;
-G2L["4d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["4d"]["TextScaled"] = true;
 G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4d"]["TextSize"] = 14;
 G2L["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4d"]["TextSize"] = 14;
 G2L["4d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4d"]["Size"] = UDim2.new(0, 239, 0, 26);
+G2L["4d"]["Size"] = UDim2.new(0, 200, 0, 50);
 G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4d"]["Text"] = [[Walkspeed -]];
-G2L["4d"]["Position"] = UDim2.new(0.018315019086003304, 0, 0.059701867401599884, 0);
+G2L["4d"]["Text"] = [[Player 🧑]];
 G2L["4d"]["BackgroundTransparency"] = 1;
+G2L["4d"]["Position"] = UDim2.new(0.315596342086792, 0, -0.009999999776482582, 0);
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
-G2L["4e"] = Instance.new("LocalScript", G2L["4d"]);
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.Divider
+G2L["4e"] = Instance.new("Frame", G2L["4c"]);
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.15333333611488342, 0);
+G2L["4e"]["Name"] = [[Divider]];
 
-
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextLabel
-G2L["4f"] = Instance.new("TextLabel", G2L["4d"]);
-G2L["4f"]["TextWrapped"] = true;
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame
+G2L["4f"] = Instance.new("ScrollingFrame", G2L["4c"]);
+G2L["4f"]["Active"] = true;
 G2L["4f"]["BorderSizePixel"] = 0;
-G2L["4f"]["RichText"] = true;
-G2L["4f"]["TextScaled"] = true;
 G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["4f"]["TextSize"] = 14;
-G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4f"]["Size"] = UDim2.new(0, 296, 0, 33);
-G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["Text"] = [[Change how fast you move]];
 G2L["4f"]["BackgroundTransparency"] = 1;
-G2L["4f"]["Position"] = UDim2.new(0.9601759910583496, 0, -0.1538461595773697, 0);
+G2L["4f"]["Size"] = UDim2.new(0, 546, 0, 251);
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.1599999964237213, 0);
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextBox
-G2L["50"] = Instance.new("TextBox", G2L["4d"]);
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton
+G2L["50"] = Instance.new("TextButton", G2L["4f"]);
+G2L["50"]["TextWrapped"] = true;
 G2L["50"]["BorderSizePixel"] = 0;
 G2L["50"]["RichText"] = true;
-G2L["50"]["TextSize"] = 14;
-G2L["50"]["TextWrapped"] = true;
+G2L["50"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["50"]["TextScaled"] = true;
 G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["50"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["TextSize"] = 14;
 G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["50"]["BackgroundTransparency"] = 1;
-G2L["50"]["Size"] = UDim2.new(0, 100, 0, 26);
+G2L["50"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["Size"] = UDim2.new(0, 239, 0, 26);
 G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["50"]["Text"] = [[Input here]];
-G2L["50"]["Position"] = UDim2.new(0.4937238395214081, 0, 0, 0);
-
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton
-G2L["51"] = Instance.new("TextButton", G2L["4c"]);
-G2L["51"]["TextWrapped"] = true;
-G2L["51"]["BorderSizePixel"] = 0;
-G2L["51"]["RichText"] = true;
-G2L["51"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["51"]["TextScaled"] = true;
-G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["TextSize"] = 14;
-G2L["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["Size"] = UDim2.new(0, 239, 0, 26);
-G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["Text"] = [[Remove Jump Cooldown]];
-G2L["51"]["Position"] = UDim2.new(0.0018315018387511373, 0, 0.3868279457092285, 0);
-G2L["51"]["BackgroundTransparency"] = 1;
+G2L["50"]["Text"] = [[Walkspeed -]];
+G2L["50"]["Position"] = UDim2.new(0.018315019086003304, 0, 0.059701867401599884, 0);
+G2L["50"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
-G2L["52"] = Instance.new("LocalScript", G2L["51"]);
+G2L["51"] = Instance.new("LocalScript", G2L["50"]);
 
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextLabel
-G2L["53"] = Instance.new("TextLabel", G2L["51"]);
-G2L["53"]["TextWrapped"] = true;
+G2L["52"] = Instance.new("TextLabel", G2L["50"]);
+G2L["52"]["TextWrapped"] = true;
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["RichText"] = true;
+G2L["52"]["TextScaled"] = true;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["52"]["TextSize"] = 14;
+G2L["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["Size"] = UDim2.new(0, 296, 0, 33);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Text"] = [[Change how fast you move]];
+G2L["52"]["BackgroundTransparency"] = 1;
+G2L["52"]["Position"] = UDim2.new(0.9601759910583496, 0, -0.1538461595773697, 0);
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextBox
+G2L["53"] = Instance.new("TextBox", G2L["50"]);
 G2L["53"]["BorderSizePixel"] = 0;
 G2L["53"]["RichText"] = true;
+G2L["53"]["TextSize"] = 14;
+G2L["53"]["TextWrapped"] = true;
 G2L["53"]["TextScaled"] = true;
 G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["53"]["TextSize"] = 14;
 G2L["53"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["53"]["Size"] = UDim2.new(0, 297, 0, 33);
-G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["53"]["Text"] = [[Lets you jump without the cooldown slowing you]];
+G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["53"]["BackgroundTransparency"] = 1;
-G2L["53"]["Position"] = UDim2.new(0.9559918642044067, 0, 0.03846153989434242, 0);
-
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextLabel
-G2L["54"] = Instance.new("TextLabel", G2L["4c"]);
-G2L["54"]["TextWrapped"] = true;
-G2L["54"]["BorderSizePixel"] = 0;
-G2L["54"]["TextScaled"] = true;
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["54"]["TextSize"] = 14;
-G2L["54"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["54"]["Size"] = UDim2.new(0, 493, 0, 41);
-G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["Text"] = [[Player Settings]];
-G2L["54"]["BackgroundTransparency"] = 1;
-G2L["54"]["Position"] = UDim2.new(-0.24166937172412872, 0, 0.30506500601768494, 0);
-
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.Divider
-G2L["55"] = Instance.new("Frame", G2L["4c"]);
-G2L["55"]["BorderSizePixel"] = 0;
-G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["55"]["Size"] = UDim2.new(0, 546, 0, 2);
-G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["55"]["Position"] = UDim2.new(0.010962182655930519, 0, 0.2972758710384369, 0);
-G2L["55"]["Name"] = [[Divider]];
+G2L["53"]["Size"] = UDim2.new(0, 100, 0, 26);
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Text"] = [[Input here]];
+G2L["53"]["Position"] = UDim2.new(0.4937238395214081, 0, 0, 0);
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton
-G2L["56"] = Instance.new("TextButton", G2L["4c"]);
+G2L["54"] = Instance.new("TextButton", G2L["4f"]);
+G2L["54"]["TextWrapped"] = true;
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["RichText"] = true;
+G2L["54"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["54"]["TextScaled"] = true;
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["TextSize"] = 14;
+G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["54"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["Size"] = UDim2.new(0, 239, 0, 26);
+G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["Text"] = [[Remove Jump Cooldown]];
+G2L["54"]["Position"] = UDim2.new(0.0018315018387511373, 0, 0.3868279457092285, 0);
+G2L["54"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
+G2L["55"] = Instance.new("LocalScript", G2L["54"]);
+
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextLabel
+G2L["56"] = Instance.new("TextLabel", G2L["54"]);
 G2L["56"]["TextWrapped"] = true;
 G2L["56"]["BorderSizePixel"] = 0;
 G2L["56"]["RichText"] = true;
-G2L["56"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["56"]["TextScaled"] = true;
 G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["56"]["TextSize"] = 14;
 G2L["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["56"]["TextSize"] = 14;
 G2L["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["56"]["Size"] = UDim2.new(0, 239, 0, 26);
+G2L["56"]["Size"] = UDim2.new(0, 297, 0, 33);
 G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["56"]["Text"] = [[Remove Ragdoll]];
-G2L["56"]["Position"] = UDim2.new(-0.0018315018387511373, 0, 0.46282678842544556, 0);
+G2L["56"]["Text"] = [[Lets you jump without the cooldown slowing you]];
 G2L["56"]["BackgroundTransparency"] = 1;
+G2L["56"]["Position"] = UDim2.new(0.9559918642044067, 0, 0.03846153989434242, 0);
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
-G2L["57"] = Instance.new("LocalScript", G2L["56"]);
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextLabel
+G2L["57"] = Instance.new("TextLabel", G2L["4f"]);
+G2L["57"]["TextWrapped"] = true;
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["TextScaled"] = true;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["57"]["TextSize"] = 14;
+G2L["57"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Text"] = [[Player Settings]];
+G2L["57"]["BackgroundTransparency"] = 1;
+G2L["57"]["Position"] = UDim2.new(-0.24166937172412872, 0, 0.30506500601768494, 0);
 
-
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextLabel
-G2L["58"] = Instance.new("TextLabel", G2L["56"]);
-G2L["58"]["TextWrapped"] = true;
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.Divider
+G2L["58"] = Instance.new("Frame", G2L["4f"]);
 G2L["58"]["BorderSizePixel"] = 0;
-G2L["58"]["RichText"] = true;
-G2L["58"]["TextScaled"] = true;
 G2L["58"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["58"]["TextSize"] = 14;
-G2L["58"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["58"]["Size"] = UDim2.new(0, 297, 0, 33);
+G2L["58"]["Size"] = UDim2.new(0, 546, 0, 2);
 G2L["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["58"]["Text"] = [[Makes it where when you fall you dont ragdoll]];
-G2L["58"]["BackgroundTransparency"] = 1;
-G2L["58"]["Position"] = UDim2.new(0.9643600583076477, 0, -0.1538461595773697, 0);
+G2L["58"]["Position"] = UDim2.new(0.010962182655930519, 0, 0.2972758710384369, 0);
+G2L["58"]["Name"] = [[Divider]];
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton
-G2L["59"] = Instance.new("TextButton", G2L["4c"]);
+G2L["59"] = Instance.new("TextButton", G2L["4f"]);
 G2L["59"]["TextWrapped"] = true;
 G2L["59"]["BorderSizePixel"] = 0;
 G2L["59"]["RichText"] = true;
@@ -908,10 +908,10 @@ G2L["59"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["59"]["TextSize"] = 14;
 G2L["59"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["59"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["59"]["Size"] = UDim2.new(0, 247, 0, 26);
+G2L["59"]["Size"] = UDim2.new(0, 239, 0, 26);
 G2L["59"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["59"]["Text"] = [[JumpPower -]];
-G2L["59"]["Position"] = UDim2.new(0.0018315018387511373, 0, 0.15129326283931732, 0);
+G2L["59"]["Text"] = [[Remove Ragdoll]];
+G2L["59"]["Position"] = UDim2.new(-0.0018315018387511373, 0, 0.46282678842544556, 0);
 G2L["59"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
@@ -928,151 +928,188 @@ G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["5b"]["TextSize"] = 14;
 G2L["5b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5b"]["Size"] = UDim2.new(0, 296, 0, 44);
+G2L["5b"]["Size"] = UDim2.new(0, 297, 0, 33);
 G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5b"]["Text"] = [[Change your Jump power (how high you jump) has a chance of not working]];
+G2L["5b"]["Text"] = [[Makes it where when you fall you dont ragdoll]];
 G2L["5b"]["BackgroundTransparency"] = 1;
-G2L["5b"]["Position"] = UDim2.new(0.9601759314537048, 0, -0.1538461595773697, 0);
+G2L["5b"]["Position"] = UDim2.new(0.9643600583076477, 0, -0.1538461595773697, 0);
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextBox
-G2L["5c"] = Instance.new("TextBox", G2L["59"]);
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton
+G2L["5c"] = Instance.new("TextButton", G2L["4f"]);
+G2L["5c"]["TextWrapped"] = true;
 G2L["5c"]["BorderSizePixel"] = 0;
 G2L["5c"]["RichText"] = true;
-G2L["5c"]["TextSize"] = 14;
-G2L["5c"]["TextWrapped"] = true;
+G2L["5c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
 G2L["5c"]["TextScaled"] = true;
 G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5c"]["TextSize"] = 14;
 G2L["5c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["5c"]["BackgroundTransparency"] = 1;
-G2L["5c"]["Size"] = UDim2.new(0, 100, 0, 26);
+G2L["5c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5c"]["Size"] = UDim2.new(0, 247, 0, 26);
 G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5c"]["Text"] = [[   Input here]];
-G2L["5c"]["Position"] = UDim2.new(0.4937238395214081, 0, 0, 0);
+G2L["5c"]["Text"] = [[JumpPower -]];
+G2L["5c"]["Position"] = UDim2.new(0.0018315018387511373, 0, 0.15129326283931732, 0);
+G2L["5c"]["BackgroundTransparency"] = 1;
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.Divider
-G2L["5d"] = Instance.new("Frame", G2L["4c"]);
-G2L["5d"]["BorderSizePixel"] = 0;
-G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5d"]["Size"] = UDim2.new(0, 546, 0, 2);
-G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5d"]["Position"] = UDim2.new(-0.020173348486423492, 0, 0.3849252760410309, 0);
-G2L["5d"]["Name"] = [[Divider]];
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
+G2L["5d"] = Instance.new("LocalScript", G2L["5c"]);
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextLabel
-G2L["5e"] = Instance.new("TextLabel", G2L["4c"]);
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextLabel
+G2L["5e"] = Instance.new("TextLabel", G2L["5c"]);
 G2L["5e"]["TextWrapped"] = true;
 G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["RichText"] = true;
 G2L["5e"]["TextScaled"] = true;
 G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["5e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["5e"]["TextSize"] = 14;
 G2L["5e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5e"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["5e"]["Size"] = UDim2.new(0, 296, 0, 44);
 G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5e"]["Text"] = [[More Coming Soon!]];
+G2L["5e"]["Text"] = [[Change your Jump power (how high you jump) has a chance of not working]];
 G2L["5e"]["BackgroundTransparency"] = 1;
-G2L["5e"]["Position"] = UDim2.new(0.027561398223042488, 0, 0.5633942484855652, 0);
+G2L["5e"]["Position"] = UDim2.new(0.9601759314537048, 0, -0.1538461595773697, 0);
 
--- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextLabel
-G2L["5f"] = Instance.new("TextLabel", G2L["4c"]);
-G2L["5f"]["TextWrapped"] = true;
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextBox
+G2L["5f"] = Instance.new("TextBox", G2L["5c"]);
 G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["RichText"] = true;
+G2L["5f"]["TextSize"] = 14;
+G2L["5f"]["TextWrapped"] = true;
 G2L["5f"]["TextScaled"] = true;
 G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["5f"]["TextSize"] = 14;
 G2L["5f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5f"]["Size"] = UDim2.new(0, 493, 0, 41);
-G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5f"]["Text"] = [[Player Modifier]];
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["5f"]["BackgroundTransparency"] = 1;
-G2L["5f"]["Position"] = UDim2.new(-0.23617486655712128, 0, -0.007812743075191975, 0);
+G2L["5f"]["Size"] = UDim2.new(0, 100, 0, 26);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Text"] = [[   Input here]];
+G2L["5f"]["Position"] = UDim2.new(0.4937238395214081, 0, 0, 0);
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.Divider
+G2L["60"] = Instance.new("Frame", G2L["4f"]);
+G2L["60"]["BorderSizePixel"] = 0;
+G2L["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["60"]["Position"] = UDim2.new(-0.020173348486423492, 0, 0.3849252760410309, 0);
+G2L["60"]["Name"] = [[Divider]];
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextLabel
+G2L["61"] = Instance.new("TextLabel", G2L["4f"]);
+G2L["61"]["TextWrapped"] = true;
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["TextScaled"] = true;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["61"]["TextSize"] = 14;
+G2L["61"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Text"] = [[More Coming Soon!]];
+G2L["61"]["BackgroundTransparency"] = 1;
+G2L["61"]["Position"] = UDim2.new(0.027561398223042488, 0, 0.5633942484855652, 0);
+
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextLabel
+G2L["62"] = Instance.new("TextLabel", G2L["4f"]);
+G2L["62"]["TextWrapped"] = true;
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["TextScaled"] = true;
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["62"]["TextSize"] = 14;
+G2L["62"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["Text"] = [[Player Modifier]];
+G2L["62"]["BackgroundTransparency"] = 1;
+G2L["62"]["Position"] = UDim2.new(-0.23617486655712128, 0, -0.007812743075191975, 0);
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.TextButton
-G2L["60"] = Instance.new("TextButton", G2L["49"]);
-G2L["60"]["TextWrapped"] = true;
-G2L["60"]["BorderSizePixel"] = 0;
-G2L["60"]["RichText"] = true;
-G2L["60"]["TextScaled"] = true;
-G2L["60"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["60"]["TextSize"] = 14;
-G2L["60"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["60"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["60"]["Size"] = UDim2.new(0, 59, 0, 46);
-G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["60"]["Text"] = [[X]];
-G2L["60"]["Position"] = UDim2.new(0.6495224833488464, 0, -0.009999999776482582, 0);
-G2L["60"]["BackgroundTransparency"] = 1;
+G2L["63"] = Instance.new("TextButton", G2L["4c"]);
+G2L["63"]["TextWrapped"] = true;
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["RichText"] = true;
+G2L["63"]["TextScaled"] = true;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["63"]["TextSize"] = 14;
+G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["63"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["63"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Text"] = [[X]];
+G2L["63"]["Position"] = UDim2.new(0.6495224833488464, 0, -0.009999999776482582, 0);
+G2L["63"]["BackgroundTransparency"] = 1;
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.TextButton.LocalScript
-G2L["61"] = Instance.new("LocalScript", G2L["60"]);
+G2L["64"] = Instance.new("LocalScript", G2L["63"]);
 
 
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.LocalScript
-G2L["62"] = Instance.new("LocalScript", G2L["49"]);
+G2L["65"] = Instance.new("LocalScript", G2L["4c"]);
 
 
 -- StarterGui.Keysystm.Zenoz.Frame.UIGradient
-G2L["63"] = Instance.new("UIGradient", G2L["18"]);
-G2L["63"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0.10000000149011612),NumberSequenceKeypoint.new(1.000, 0.10000000149011612)};
-G2L["63"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(241, 241, 241)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(241, 241, 241))};
-G2L["63"]["Offset"] = Vector2.new(1.2000000476837158, 1.2000000476837158);
+G2L["66"] = Instance.new("UIGradient", G2L["18"]);
+G2L["66"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0.10000000149011612),NumberSequenceKeypoint.new(1.000, 0.10000000149011612)};
+G2L["66"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(241, 241, 241)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(241, 241, 241))};
+G2L["66"]["Offset"] = Vector2.new(1.2000000476837158, 1.2000000476837158);
 
 -- StarterGui.Keysystm.Zenoz.Frame.UICorner
-G2L["64"] = Instance.new("UICorner", G2L["18"]);
+G2L["67"] = Instance.new("UICorner", G2L["18"]);
 
 
 -- StarterGui.Keysystm.Zenoz.Frame.Divider
-G2L["65"] = Instance.new("Frame", G2L["18"]);
-G2L["65"]["BorderSizePixel"] = 0;
-G2L["65"]["BackgroundColor3"] = Color3.fromRGB(0, 137, 0);
-G2L["65"]["Size"] = UDim2.new(0, 2, 0, 306);
-G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["65"]["Position"] = UDim2.new(0.2018253207206726, 0, 0.12994350492954254, 0);
-G2L["65"]["Name"] = [[Divider]];
+G2L["68"] = Instance.new("Frame", G2L["18"]);
+G2L["68"]["BorderSizePixel"] = 0;
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(0, 137, 0);
+G2L["68"]["Size"] = UDim2.new(0, 2, 0, 306);
+G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["Position"] = UDim2.new(0.2018253207206726, 0, 0.12994350492954254, 0);
+G2L["68"]["Name"] = [[Divider]];
 
 -- StarterGui.Keysystm.Zenoz.Frame.Divider
-G2L["66"] = Instance.new("Frame", G2L["18"]);
-G2L["66"]["BorderSizePixel"] = 0;
-G2L["66"]["BackgroundColor3"] = Color3.fromRGB(0, 137, 0);
-G2L["66"]["Size"] = UDim2.new(0, 2, 0, 306);
-G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["66"]["Position"] = UDim2.new(0.9986089468002319, 0, 0.1355932205915451, 0);
-G2L["66"]["Name"] = [[Divider]];
+G2L["69"] = Instance.new("Frame", G2L["18"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(0, 137, 0);
+G2L["69"]["Size"] = UDim2.new(0, 2, 0, 306);
+G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["Position"] = UDim2.new(0.9986089468002319, 0, 0.1355932205915451, 0);
+G2L["69"]["Name"] = [[Divider]];
 
 -- StarterGui.Keysystm.Zenoz.Frame.Divider
-G2L["67"] = Instance.new("Frame", G2L["18"]);
-G2L["67"]["BorderSizePixel"] = 0;
-G2L["67"]["BackgroundColor3"] = Color3.fromRGB(0, 137, 0);
-G2L["67"]["Size"] = UDim2.new(0, 2, 0, 346);
-G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["67"]["Position"] = UDim2.new(-0.0013910483103245497, 0, 0.02259887009859085, 0);
-G2L["67"]["Name"] = [[Divider]];
+G2L["6a"] = Instance.new("Frame", G2L["18"]);
+G2L["6a"]["BorderSizePixel"] = 0;
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(0, 137, 0);
+G2L["6a"]["Size"] = UDim2.new(0, 2, 0, 346);
+G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["Position"] = UDim2.new(-0.0013910483103245497, 0, 0.02259887009859085, 0);
+G2L["6a"]["Name"] = [[Divider]];
 
 -- StarterGui.Keysystm.Zenoz.LocalScript
-G2L["68"] = Instance.new("LocalScript", G2L["17"]);
+G2L["6b"] = Instance.new("LocalScript", G2L["17"]);
 
 
 -- StarterGui.Keysystm.Zenoz.Ding~
-G2L["69"] = Instance.new("Sound", G2L["17"]);
-G2L["69"]["Name"] = [[Ding~]];
-G2L["69"]["SoundId"] = [[rbxassetid://9068539820]];
-
--- StarterGui.Keysystm.Zenoz.LocalScript
-G2L["6a"] = Instance.new("LocalScript", G2L["17"]);
-
-
--- StarterGui.Keysystm.Zenoz.Script
-G2L["6b"] = Instance.new("Script", G2L["17"]);
-
-
--- StarterGui.Keysystm.Zenoz.LocalScript
-G2L["6c"] = Instance.new("LocalScript", G2L["17"]);
-
+G2L["6c"] = Instance.new("Sound", G2L["17"]);
+G2L["6c"]["Name"] = [[Ding~]];
+G2L["6c"]["SoundId"] = [[rbxassetid://9068539820]];
 
 -- StarterGui.Keysystm.Zenoz.LocalScript
 G2L["6d"] = Instance.new("LocalScript", G2L["17"]);
+
+
+-- StarterGui.Keysystm.Zenoz.Script
+G2L["6e"] = Instance.new("Script", G2L["17"]);
+
+
+-- StarterGui.Keysystm.Zenoz.LocalScript
+G2L["6f"] = Instance.new("LocalScript", G2L["17"]);
+
+
+-- StarterGui.Keysystm.Zenoz.LocalScript
+G2L["70"] = Instance.new("LocalScript", G2L["17"]);
 
 
 -- StarterGui.Keysystm.Frame.TextButton.LocalScript
@@ -1195,23 +1232,19 @@ task.spawn(C_29);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Game.ScrollingFrame.TextButton.LocalScript
 local function C_33()
 local script = G2L["33"];
-	local button = script.Parent
-	local ambience = game.Workspace["SCP-860-1 Ambience"]
-	local isMusicEnabled = true
+	local player = game.Players.LocalPlayer
 	
-	local function toggleMusic()
-		if isMusicEnabled then
-			ambience.Volume = 0
-			button.Text = "Disable music - ✅"
+	local textButton = script.Parent -- Assuming this script is a child of the TextButton
+	
+	textButton.MouseButton1Click:Connect(function()
+		local antiCheatFolder = player:FindFirstChild("AntiCheat")
+		if antiCheatFolder then
+			antiCheatFolder:Destroy()
+			print("AntiCheat folder removed.")
 		else
-			ambience.Volume = 0.5
-			button.Text = "Disable music - ❌"
+			print("AntiCheat folder not found.")
 		end
-	
-		isMusicEnabled = not isMusicEnabled
-	end
-	
-	button.MouseButton1Click:Connect(toggleMusic)
+	end)
 	
 end;
 task.spawn(C_33);
@@ -1295,25 +1328,43 @@ local script = G2L["44"];
 	
 end;
 task.spawn(C_44);
--- StarterGui.Keysystm.Zenoz.Frame.Display.Game.TextButton.LocalScript
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Game.ScrollingFrame.TextButton.LocalScript
 local function C_47()
 local script = G2L["47"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.MAP.SHOP.joe.Head
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_47);
+-- StarterGui.Keysystm.Zenoz.Frame.Display.Game.TextButton.LocalScript
+local function C_4a()
+local script = G2L["4a"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible =false
 	end)
 end;
-task.spawn(C_47);
+task.spawn(C_4a);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Game.LocalScript
-local function C_48()
-local script = G2L["48"];
+local function C_4b()
+local script = G2L["4b"];
 	if script.Parent.Parent.Player.Visible == true then
 		script.Parent.Visible = false
 	end
 end;
-task.spawn(C_48);
+task.spawn(C_4b);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
-local function C_4e()
-local script = G2L["4e"];
+local function C_51()
+local script = G2L["51"];
 	local player = game.Players.LocalPlayer
 	local walkspeedTextbox = script.Parent.TextBox -- Assuming the TextBox is a child of the parent object
 	local changeSpeedButton = script.Parent -- Assuming the TextButton is also a child of the same parent object
@@ -1332,10 +1383,10 @@ local script = G2L["4e"];
 	changeSpeedButton.MouseButton1Click:Connect(changeWalkspeed)
 	
 end;
-task.spawn(C_4e);
+task.spawn(C_51);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
-local function C_52()
-local script = G2L["52"];
+local function C_55()
+local script = G2L["55"];
 	local player = game.Players.LocalPlayer
 	local deleteScriptButton = script.Parent -- Reference to the TextButton
 	
@@ -1352,10 +1403,10 @@ local script = G2L["52"];
 	deleteScriptButton.MouseButton1Click:Connect(deleteJumpCooldownScript)
 	
 end;
-task.spawn(C_52);
+task.spawn(C_55);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
-local function C_57()
-local script = G2L["57"];
+local function C_5a()
+local script = G2L["5a"];
 	local player = game.Players.LocalPlayer
 	local deleteScriptButton = script.Parent -- Reference to the TextButton
 	
@@ -1372,10 +1423,10 @@ local script = G2L["57"];
 	deleteScriptButton.MouseButton1Click:Connect(deletePlayerFallHandlerScript)
 	
 end;
-task.spawn(C_57);
+task.spawn(C_5a);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
-local function C_5a()
-local script = G2L["5a"];
+local function C_5d()
+local script = G2L["5d"];
 	local player = game.Players.LocalPlayer
 	local jumppowerTextbox = script.Parent.TextBox -- Assuming the TextBox is a child of the parent object
 	local changeJumpPowerButton = script.Parent -- Assuming the TextButton is also a child of the same parent object
@@ -1394,26 +1445,26 @@ local script = G2L["5a"];
 	changeJumpPowerButton.MouseButton1Click:Connect(changeJumpPower)
 	
 end;
-task.spawn(C_5a);
+task.spawn(C_5d);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.TextButton.LocalScript
-local function C_61()
-local script = G2L["61"];
+local function C_64()
+local script = G2L["64"];
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible =false
 	end)
 end;
-task.spawn(C_61);
+task.spawn(C_64);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Player.LocalScript
-local function C_62()
-local script = G2L["62"];
+local function C_65()
+local script = G2L["65"];
 	if script.Parent.Parent.Game.Visible == true then
 		script.Parent.Visible = false
 	end
 end;
-task.spawn(C_62);
+task.spawn(C_65);
 -- StarterGui.Keysystm.Zenoz.LocalScript
-local function C_68()
-local script = G2L["68"];
+local function C_6b()
+local script = G2L["6b"];
 	local UserInputService = game:GetService("UserInputService")
 	local gui = script.Parent -- Reference to the ScreenGui
 	
@@ -1426,10 +1477,10 @@ local script = G2L["68"];
 	UserInputService.InputBegan:Connect(onKeyPress)
 	
 end;
-task.spawn(C_68);
+task.spawn(C_6b);
 -- StarterGui.Keysystm.Zenoz.LocalScript
-local function C_6a()
-local script = G2L["6a"];
+local function C_6d()
+local script = G2L["6d"];
 	if script.Parent.Frame.Visible == true then
 	wait(1)
 	game.StarterGui:SetCore("SendNotification", {
@@ -1445,10 +1496,10 @@ local script = G2L["6a"];
 		script:Destroy()
 		end
 end;
-task.spawn(C_6a);
+task.spawn(C_6d);
 -- StarterGui.Keysystm.Zenoz.LocalScript
-local function C_6c()
-local script = G2L["6c"];
+local function C_6f()
+local script = G2L["6f"];
 	if script.Parent.Frame.Visible == true then
 	script.Parent.Frame.Transparency = 1
 	wait(0.6)
@@ -1474,11 +1525,11 @@ local script = G2L["6c"];
 		end
 	
 end;
-task.spawn(C_6c);
+task.spawn(C_6f);
 -- StarterGui.Keysystm.Zenoz.LocalScript
-local function C_6d()
-local script = G2L["6d"];
-	local guiName = "Zenoz" -- Replace with your GUI's name
+local function C_70()
+local script = G2L["70"];
+	local guiName = "Keysystm" -- Replace with your GUI's name
 	
 	local playerGui = game.Players.LocalPlayer.PlayerGui
 	
@@ -1496,6 +1547,6 @@ local script = G2L["6d"];
 	-- For example, you can use the code to create a new GUI
 	
 end;
-task.spawn(C_6d);
+task.spawn(C_70);
 
 return G2L["1"], require;
