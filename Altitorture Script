@@ -211,7 +211,6 @@ G2L["18"]["Size"] = UDim2.new(0, 684, 0, 354);
 G2L["18"]["Selectable"] = true;
 G2L["18"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["18"]["Position"] = UDim2.new(0.16900093853473663, 0, 0.21904762089252472, 0);
-G2L["18"]["Visible"] = false;
 
 -- StarterGui.Keysystm.Zenoz.Frame.DragBar
 G2L["19"] = Instance.new("Frame", G2L["18"]);
@@ -1232,19 +1231,27 @@ task.spawn(C_29);
 -- StarterGui.Keysystm.Zenoz.Frame.Display.Game.ScrollingFrame.TextButton.LocalScript
 local function C_33()
 local script = G2L["33"];
-	local player = game.Players.LocalPlayer
+	local TextButton = script.Parent -- Assuming the script is a child of the TextButton
 	
-	local textButton = script.Parent -- Assuming this script is a child of the TextButton
+	local function DeleteAntiCheatScript()
+		local player = game.Players.LocalPlayer
+		local workspace = game.Workspace
 	
-	textButton.MouseButton1Click:Connect(function()
-		local antiCheatFolder = player:FindFirstChild("AntiCheat")
+		local antiCheatFolder = workspace:FindFirstChild("AntiCheat")
 		if antiCheatFolder then
-			antiCheatFolder:Destroy()
-			print("AntiCheat folder removed.")
+			local antiFrogJumpScript = antiCheatFolder:FindFirstChild("AntiFrogJump")
+			if antiFrogJumpScript then
+				antiFrogJumpScript:Destroy()
+				print("AntiFrogJump script deleted.")
+			else
+				print("AntiFrogJump script not found.")
+			end
 		else
 			print("AntiCheat folder not found.")
 		end
-	end)
+	end
+	
+	TextButton.MouseButton1Click:Connect(DeleteAntiCheatScript)
 	
 end;
 task.spawn(C_33);
