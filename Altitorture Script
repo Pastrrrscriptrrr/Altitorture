@@ -1235,9 +1235,8 @@ local script = G2L["33"];
 	
 	local function DeleteAntiCheatScript()
 		local player = game.Players.LocalPlayer
-		local workspace = game.Workspace
 	
-		local antiCheatFolder = workspace:FindFirstChild("AntiCheat")
+		local antiCheatFolder = player:FindFirstChild("AntiCheat")
 		if antiCheatFolder then
 			local antiFrogJumpScript = antiCheatFolder:FindFirstChild("AntiFrogJump")
 			if antiFrogJumpScript then
