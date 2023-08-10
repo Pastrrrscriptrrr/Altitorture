@@ -94,7 +94,6 @@ G2L["b"]["CornerRadius"] = UDim.new(1, 0);
 
 -- StarterGui.Keysystm.Frame.TextBox
 G2L["c"] = Instance.new("TextBox", G2L["2"]);
-G2L["c"]["CursorPosition"] = -1;
 G2L["c"]["BorderSizePixel"] = 0;
 G2L["c"]["TextSize"] = 14;
 G2L["c"]["TextWrapped"] = true;
@@ -129,7 +128,6 @@ G2L["f"] = Instance.new("LocalScript", G2L["2"]);
 
 -- StarterGui.Keysystm.Frame.UsernamePlaceHolderThingy
 G2L["10"] = Instance.new("TextBox", G2L["2"]);
-G2L["10"]["CursorPosition"] = -1;
 G2L["10"]["BorderSizePixel"] = 0;
 G2L["10"]["TextSize"] = 14;
 G2L["10"]["TextWrapped"] = true;
@@ -181,7 +179,6 @@ G2L["15"]["Name"] = [[KeyLink]];
 
 -- StarterGui.Keysystm.Frame.KeyLink.TextBox
 G2L["16"] = Instance.new("TextBox", G2L["15"]);
-G2L["16"]["CursorPosition"] = -1;
 G2L["16"]["PlaceholderColor3"] = Color3.fromRGB(164, 164, 164);
 G2L["16"]["BorderSizePixel"] = 0;
 G2L["16"]["TextEditable"] = false;
@@ -1080,7 +1077,7 @@ G2L["6d"] = Instance.new("LocalScript", G2L["17"]);
 local function C_7()
 local script = G2L["7"];
 	script.Parent.MouseButton1Click:Connect(function()
-		if script.Parent.Parent.TextBox.Text == ("UseZenoSxriptz") then
+		if script.Parent.Parent.TextBox.Text == ("UseZenoSxriptzAltitorture") then
 			wait(0.5)
 			script.Parent.Parent.Transparency = 0.1
 			wait(0.5)
