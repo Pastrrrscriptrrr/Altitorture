@@ -12,7 +12,6 @@ local G2L = {};
 
 -- StarterGui.Altitorture
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Enabled"] = false;
 G2L["1"]["Name"] = [[Altitorture]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
@@ -1102,7 +1101,8 @@ local script = G2L["7"];
 			wait(0.5)
 			script.Parent.Parent.Visible = false
 			script.Parent.Parent.Parent.Zenoz.Frame.Visible = true
-		end
+			
+	end
 	end)
 end;
 task.spawn(C_7);
