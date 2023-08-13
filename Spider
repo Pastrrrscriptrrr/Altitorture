@@ -190,10 +190,10 @@ G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["16"]["BackgroundTransparency"] = 1;
-G2L["16"]["PlaceholderText"] = [[https://link-center.net/176120/key-system]];
+G2L["16"]["PlaceholderText"] = [[https://link-target.net/176120/spider-key1]];
 G2L["16"]["Size"] = UDim2.new(0, 293, 0, 50);
 G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16"]["Text"] = [[https://link-center.net/176120/key-system]];
+G2L["16"]["Text"] = [[https://link-target.net/176120/spider-key1]];
 G2L["16"]["ClearTextOnFocus"] = false;
 
 -- StarterGui.Spider.Zenoz
