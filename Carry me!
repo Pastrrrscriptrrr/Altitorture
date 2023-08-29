@@ -1,0 +1,2120 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
+]=]
+
+-- Instances: 177 | Scripts: 40 | Modules: 0
+local G2L = {};
+
+-- StarterGui.CarryMe!
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[CarryMe!]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.CarryMe!.Keysystem
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Active"] = true;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(46, 46, 46);
+G2L["2"]["Size"] = UDim2.new(0, 293, 0, 362);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Position"] = UDim2.new(0.3632119596004486, 0, 0.16984136402606964, 0);
+G2L["2"]["Name"] = [[Keysystem]];
+
+-- StarterGui.CarryMe!.Keysystem.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.CarryMe!.Keysystem.UIGradient
+G2L["4"] = Instance.new("UIGradient", G2L["2"]);
+G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(166, 166, 166)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(166, 166, 166))};
+
+-- StarterGui.CarryMe!.Keysystem.TextLabel
+G2L["5"] = Instance.new("TextLabel", G2L["2"]);
+G2L["5"]["TextWrapped"] = true;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["TextScaled"] = true;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5"]["TextSize"] = 14;
+G2L["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5"]["Size"] = UDim2.new(0, 265, 0, 47);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Text"] = [[Zenoz Keysystem]];
+G2L["5"]["BackgroundTransparency"] = 1;
+G2L["5"]["Position"] = UDim2.new(0.047749489545822144, 0, 0.17475728690624237, 0);
+
+-- StarterGui.CarryMe!.Keysystem.TextButton
+G2L["6"] = Instance.new("TextButton", G2L["2"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextScaled"] = true;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(86, 86, 86);
+G2L["6"]["TextSize"] = 14;
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["Size"] = UDim2.new(0, 120, 0, 39);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[Enter]];
+G2L["6"]["Position"] = UDim2.new(0.5635140538215637, 0, 0.7205239534378052, 0);
+G2L["6"]["BackgroundTransparency"] = 0.4000000059604645;
+
+-- StarterGui.CarryMe!.Keysystem.TextButton.LocalScript
+G2L["7"] = Instance.new("LocalScript", G2L["6"]);
+
+
+-- StarterGui.CarryMe!.Keysystem.TextButton.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["6"]);
+G2L["8"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.CarryMe!.Keysystem.TextButton
+G2L["9"] = Instance.new("TextButton", G2L["2"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextScaled"] = true;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(86, 86, 86);
+G2L["9"]["TextSize"] = 14;
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["Size"] = UDim2.new(0, 144, 0, 39);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Get keysys link]];
+G2L["9"]["Position"] = UDim2.new(0.024470306932926178, 0, 0.7205239534378052, 0);
+G2L["9"]["BackgroundTransparency"] = 0.4000000059604645;
+
+-- StarterGui.CarryMe!.Keysystem.TextButton.LocalScript
+G2L["a"] = Instance.new("LocalScript", G2L["9"]);
+
+
+-- StarterGui.CarryMe!.Keysystem.TextButton.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["9"]);
+G2L["b"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.CarryMe!.Keysystem.TextBox
+G2L["c"] = Instance.new("TextBox", G2L["2"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextSize"] = 14;
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["TextScaled"] = true;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["PlaceholderText"] = [[Enter your key here]];
+G2L["c"]["Size"] = UDim2.new(0, 217, 0, 24);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[]];
+G2L["c"]["Position"] = UDim2.new(0.16037747263908386, 0, 0.5131075382232666, 0);
+
+-- StarterGui.CarryMe!.Keysystem.TextBox.Frame
+G2L["d"] = Instance.new("Frame", G2L["c"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["Size"] = UDim2.new(0, 218, 0, 2);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Position"] = UDim2.new(-0.010129585862159729, 0, 1.1713879108428955, 0);
+
+-- StarterGui.CarryMe!.Keysystem.Ding~
+G2L["e"] = Instance.new("Sound", G2L["2"]);
+G2L["e"]["Name"] = [[Ding~]];
+G2L["e"]["SoundId"] = [[rbxassetid://9068539820]];
+
+-- StarterGui.CarryMe!.Keysystem.LocalScript
+G2L["f"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.CarryMe!.Keysystem.UsernamePlaceHolderThingy
+G2L["10"] = Instance.new("TextBox", G2L["2"]);
+G2L["10"]["BorderSizePixel"] = 0;
+G2L["10"]["TextSize"] = 14;
+G2L["10"]["TextWrapped"] = true;
+G2L["10"]["TextScaled"] = true;
+G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["10"]["BorderMode"] = Enum.BorderMode.Inset;
+G2L["10"]["BackgroundTransparency"] = 1;
+G2L["10"]["PlaceholderText"] = [[Enter your Username here (not needed just for fun)]];
+G2L["10"]["Size"] = UDim2.new(0, 217, 0, 22);
+G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10"]["Text"] = [[]];
+G2L["10"]["Position"] = UDim2.new(0.16037747263908386, 0, 0.40631142258644104, 0);
+G2L["10"]["Name"] = [[UsernamePlaceHolderThingy]];
+
+-- StarterGui.CarryMe!.Keysystem.UsernamePlaceHolderThingy.Frame
+G2L["11"] = Instance.new("Frame", G2L["10"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["Size"] = UDim2.new(0, 218, 0, 2);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Position"] = UDim2.new(-0.010129585862159729, 0, 1.1713879108428955, 0);
+
+-- StarterGui.CarryMe!.Keysystem.Frame
+G2L["12"] = Instance.new("Frame", G2L["2"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(44, 44, 44);
+G2L["12"]["Size"] = UDim2.new(0, 293, 0, 29);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+-- StarterGui.CarryMe!.Keysystem.Frame.UICorner
+G2L["13"] = Instance.new("UICorner", G2L["12"]);
+
+
+-- StarterGui.CarryMe!.Keysystem.Frame.LocalScript
+G2L["14"] = Instance.new("LocalScript", G2L["12"]);
+
+
+-- StarterGui.CarryMe!.Keysystem.KeyLink
+G2L["15"] = Instance.new("Frame", G2L["2"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["15"]["Size"] = UDim2.new(0, 293, 0, 52);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["15"]["Position"] = UDim2.new(0, 0, 0, 51);
+G2L["15"]["Visible"] = false;
+G2L["15"]["Name"] = [[KeyLink]];
+
+-- StarterGui.CarryMe!.Keysystem.KeyLink.TextBox
+G2L["16"] = Instance.new("TextBox", G2L["15"]);
+G2L["16"]["PlaceholderColor3"] = Color3.fromRGB(164, 164, 164);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["TextEditable"] = false;
+G2L["16"]["RichText"] = true;
+G2L["16"]["TextSize"] = 14;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["16"]["BackgroundTransparency"] = 1;
+G2L["16"]["PlaceholderText"] = [[https://direct-link.net/176120/zenoz-key]];
+G2L["16"]["Size"] = UDim2.new(0, 293, 0, 50);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["Text"] = [[https://direct-link.net/176120/zenoz-key]];
+G2L["16"]["ClearTextOnFocus"] = false;
+
+-- StarterGui.CarryMe!.Zenoz
+G2L["17"] = Instance.new("ScreenGui", G2L["1"]);
+G2L["17"]["Name"] = [[Zenoz]];
+G2L["17"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.CarryMe!.Zenoz.Frame
+G2L["18"] = Instance.new("Frame", G2L["17"]);
+G2L["18"]["Active"] = true;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(48, 48, 48);
+G2L["18"]["Size"] = UDim2.new(0, 684, 0, 354);
+G2L["18"]["Selectable"] = true;
+G2L["18"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Position"] = UDim2.new(0.28282997012138367, 0, 0.23174603283405304, 0);
+G2L["18"]["Visible"] = false;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar
+G2L["19"] = Instance.new("Frame", G2L["18"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(49, 49, 49);
+G2L["19"]["Size"] = UDim2.new(0, 684, 0, 46);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Name"] = [[DragBar]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.TextButton
+G2L["1a"] = Instance.new("TextButton", G2L["19"]);
+G2L["1a"]["TextWrapped"] = true;
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["RichText"] = true;
+G2L["1a"]["TextScaled"] = true;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["1a"]["TextSize"] = 14;
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["1a"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Text"] = [[O]];
+G2L["1a"]["Position"] = UDim2.new(0.9137426614761353, 0, 0, 0);
+G2L["1a"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.TextButton.LocalScript
+G2L["1b"] = Instance.new("LocalScript", G2L["1a"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.Divider
+G2L["1c"] = Instance.new("Frame", G2L["19"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["Size"] = UDim2.new(0, 684, 0, -2);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Position"] = UDim2.new(0, 0, 0.9995090365409851, 0);
+G2L["1c"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.TextLabel
+G2L["1d"] = Instance.new("TextLabel", G2L["19"]);
+G2L["1d"]["TextWrapped"] = true;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["TextScaled"] = true;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1d"]["TextSize"] = 14;
+G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["Size"] = UDim2.new(0, 200, 0, 37);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Text"] = [[Zenoz Script]];
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Position"] = UDim2.new(0, 0, 0.08695652335882187, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.LocalScript
+G2L["1e"] = Instance.new("LocalScript", G2L["19"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.UICorner
+G2L["1f"] = Instance.new("UICorner", G2L["19"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.Divider
+G2L["20"] = Instance.new("Frame", G2L["19"]);
+G2L["20"]["BorderSizePixel"] = 0;
+G2L["20"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["20"]["Size"] = UDim2.new(0, 670, 0, 2);
+G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["20"]["Position"] = UDim2.new(0.011695906519889832, 0, -0.021739130839705467, 0);
+G2L["20"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.Divider.UICorner
+G2L["21"] = Instance.new("UICorner", G2L["20"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.Divider
+G2L["22"] = Instance.new("Frame", G2L["19"]);
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["Size"] = UDim2.new(0, 677, 0, 2);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Position"] = UDim2.new(0.010233918204903603, 0, 7.630434989929199, 0);
+G2L["22"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.Divider.UICorner
+G2L["23"] = Instance.new("UICorner", G2L["22"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.TextLabel
+G2L["24"] = Instance.new("TextLabel", G2L["19"]);
+G2L["24"]["TextWrapped"] = true;
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["TextScaled"] = true;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["24"]["TextSize"] = 14;
+G2L["24"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["24"]["Size"] = UDim2.new(0, 200, 0, 37);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Text"] = [[V1.0]];
+G2L["24"]["BackgroundTransparency"] = 1;
+G2L["24"]["Position"] = UDim2.new(0.3742690086364746, 0, 0.08695652335882187, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox
+G2L["25"] = Instance.new("Frame", G2L["18"]);
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(49, 49, 49);
+G2L["25"]["Size"] = UDim2.new(0, 139, 0, 307);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Position"] = UDim2.new(0, 0, 0.12994350492954254, 0);
+G2L["25"]["Name"] = [[ListBox]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton
+G2L["26"] = Instance.new("TextButton", G2L["25"]);
+G2L["26"]["TextWrapped"] = true;
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextScaled"] = true;
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(89, 89, 89);
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["Size"] = UDim2.new(0, 139, 0, 21);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Text"] = [[Player 🧑]];
+G2L["26"]["Position"] = UDim2.new(0, 0, 0.061889249831438065, 0);
+G2L["26"]["BackgroundTransparency"] = 0.30000001192092896;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.LocalScript
+G2L["27"] = Instance.new("LocalScript", G2L["26"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.UICorner
+G2L["28"] = Instance.new("UICorner", G2L["26"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton
+G2L["29"] = Instance.new("TextButton", G2L["25"]);
+G2L["29"]["TextWrapped"] = true;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["TextScaled"] = true;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(89, 89, 89);
+G2L["29"]["TextSize"] = 14;
+G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["Visible"] = false;
+G2L["29"]["Size"] = UDim2.new(0, 139, 0, 21);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Text"] = [[Game 🌎]];
+G2L["29"]["Position"] = UDim2.new(-0.007194244768470526, 0, 0.19218240678310394, 0);
+G2L["29"]["BackgroundTransparency"] = 0.30000001192092896;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.LocalScript
+G2L["2a"] = Instance.new("LocalScript", G2L["29"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.UICorner
+G2L["2b"] = Instance.new("UICorner", G2L["29"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextLabel
+G2L["2c"] = Instance.new("TextLabel", G2L["25"]);
+G2L["2c"]["TextWrapped"] = true;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextScaled"] = true;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2c"]["TextSize"] = 14;
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["Size"] = UDim2.new(0, 139, 0, 42);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[Spider]];
+G2L["2c"]["BackgroundTransparency"] = 1;
+G2L["2c"]["Position"] = UDim2.new(-0.006844939198344946, 0, 0.8612916469573975, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton
+G2L["2d"] = Instance.new("TextButton", G2L["25"]);
+G2L["2d"]["TextWrapped"] = true;
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["TextScaled"] = true;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(89, 89, 89);
+G2L["2d"]["TextSize"] = 14;
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["Visible"] = false;
+G2L["2d"]["Size"] = UDim2.new(0, 139, 0, 21);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Text"] = [[Autofarm 🔁]];
+G2L["2d"]["Position"] = UDim2.new(0.007194244768470526, 0, 0.3094462454319, 0);
+G2L["2d"]["BackgroundTransparency"] = 0.30000001192092896;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.LocalScript
+G2L["2e"] = Instance.new("LocalScript", G2L["2d"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.UICorner
+G2L["2f"] = Instance.new("UICorner", G2L["2d"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton
+G2L["30"] = Instance.new("TextButton", G2L["25"]);
+G2L["30"]["TextWrapped"] = true;
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["TextScaled"] = true;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(89, 89, 89);
+G2L["30"]["TextSize"] = 14;
+G2L["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["30"]["Size"] = UDim2.new(0, 139, 0, 21);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Text"] = [[Teleports 🌀🚀]];
+G2L["30"]["Position"] = UDim2.new(0.007194244768470526, 0, 0.1986970752477646, 0);
+G2L["30"]["BackgroundTransparency"] = 0.30000001192092896;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.LocalScript
+G2L["31"] = Instance.new("LocalScript", G2L["30"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.UICorner
+G2L["32"] = Instance.new("UICorner", G2L["30"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton
+G2L["33"] = Instance.new("TextButton", G2L["25"]);
+G2L["33"]["TextWrapped"] = true;
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["TextScaled"] = true;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(89, 89, 89);
+G2L["33"]["TextSize"] = 14;
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["33"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["Size"] = UDim2.new(0, 125, 0, 21);
+G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["Text"] = [[lllouis / lllouis#4869]];
+G2L["33"]["Position"] = UDim2.new(0.057553958147764206, 0, 0.5504885911941528, 0);
+G2L["33"]["BackgroundTransparency"] = 0.30000001192092896;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.UICorner
+G2L["34"] = Instance.new("UICorner", G2L["33"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Divider
+G2L["35"] = Instance.new("Frame", G2L["18"]);
+G2L["35"]["BorderSizePixel"] = 0;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["Size"] = UDim2.new(0, 139, 0, -1);
+G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["35"]["Position"] = UDim2.new(0, 0, 0.8615819215774536, 0);
+G2L["35"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display
+G2L["36"] = Instance.new("Frame", G2L["18"]);
+G2L["36"]["Active"] = true;
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Size"] = UDim2.new(0, 545, 0, 300);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Position"] = UDim2.new(0.20321637392044067, 0, 0.1497175097465515, 0);
+G2L["36"]["Name"] = [[Display]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game
+G2L["37"] = Instance.new("Frame", G2L["36"]);
+G2L["37"]["BorderSizePixel"] = 0;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["BackgroundTransparency"] = 1;
+G2L["37"]["Size"] = UDim2.new(0, 545, 0, 300);
+G2L["37"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Visible"] = false;
+G2L["37"]["Name"] = [[Game]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.TextLabel
+G2L["38"] = Instance.new("TextLabel", G2L["37"]);
+G2L["38"]["TextWrapped"] = true;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextScaled"] = true;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["38"]["TextSize"] = 14;
+G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Text"] = [[Game🌎]];
+G2L["38"]["BackgroundTransparency"] = 1;
+G2L["38"]["Position"] = UDim2.new(0.315596342086792, 0, -0.009999999776482582, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.Divider
+G2L["39"] = Instance.new("Frame", G2L["37"]);
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.15333333611488342, 0);
+G2L["39"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.ScrollingFrame
+G2L["3a"] = Instance.new("ScrollingFrame", G2L["37"]);
+G2L["3a"]["Active"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(0, 546, 0, 251);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.1599999964237213, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.ScrollingFrame.TextLabel
+G2L["3b"] = Instance.new("TextLabel", G2L["3a"]);
+G2L["3b"]["TextWrapped"] = true;
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["TextScaled"] = true;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3b"]["TextSize"] = 14;
+G2L["3b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3b"]["Size"] = UDim2.new(0, 518, 0, 41);
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Text"] = [[Teleports]];
+G2L["3b"]["BackgroundTransparency"] = 1;
+G2L["3b"]["Position"] = UDim2.new(-0.32421988248825073, 0, 0.3829438090324402, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.ScrollingFrame.Divider
+G2L["3c"] = Instance.new("Frame", G2L["3a"]);
+G2L["3c"]["BorderSizePixel"] = 0;
+G2L["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3c"]["Size"] = UDim2.new(0, 566, 0, 2);
+G2L["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3c"]["Position"] = UDim2.new(-0.00002682864032976795, 0, 0.385647714138031, 0);
+G2L["3c"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.ScrollingFrame.TextLabel
+G2L["3d"] = Instance.new("TextLabel", G2L["3a"]);
+G2L["3d"]["TextWrapped"] = true;
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["TextScaled"] = true;
+G2L["3d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3d"]["TextSize"] = 14;
+G2L["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["Size"] = UDim2.new(0, 518, 0, 41);
+G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3d"]["Text"] = [[Mods]];
+G2L["3d"]["BackgroundTransparency"] = 1;
+G2L["3d"]["Position"] = UDim2.new(-0.3919854462146759, 0, -0.00042311224387958646, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.TextButton
+G2L["3e"] = Instance.new("TextButton", G2L["37"]);
+G2L["3e"]["TextWrapped"] = true;
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["RichText"] = true;
+G2L["3e"]["TextScaled"] = true;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["3e"]["TextSize"] = 14;
+G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["3e"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Text"] = [[X]];
+G2L["3e"]["Position"] = UDim2.new(0.6495224833488464, 0, -0.009999999776482582, 0);
+G2L["3e"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.TextButton.LocalScript
+G2L["3f"] = Instance.new("LocalScript", G2L["3e"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.LocalScript
+G2L["40"] = Instance.new("LocalScript", G2L["37"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player
+G2L["41"] = Instance.new("Frame", G2L["36"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["BackgroundTransparency"] = 1;
+G2L["41"]["Size"] = UDim2.new(0, 545, 0, 300);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Visible"] = false;
+G2L["41"]["Name"] = [[Player]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.TextLabel
+G2L["42"] = Instance.new("TextLabel", G2L["41"]);
+G2L["42"]["TextWrapped"] = true;
+G2L["42"]["BorderSizePixel"] = 0;
+G2L["42"]["TextScaled"] = true;
+G2L["42"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["42"]["TextSize"] = 14;
+G2L["42"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["42"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["42"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["42"]["Text"] = [[Player 🧑]];
+G2L["42"]["BackgroundTransparency"] = 1;
+G2L["42"]["Position"] = UDim2.new(0.315596342086792, 0, -0.009999999776482582, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.Divider
+G2L["43"] = Instance.new("Frame", G2L["41"]);
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["43"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.15333333611488342, 0);
+G2L["43"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame
+G2L["44"] = Instance.new("ScrollingFrame", G2L["41"]);
+G2L["44"]["Active"] = true;
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["BackgroundTransparency"] = 1;
+G2L["44"]["Size"] = UDim2.new(0, 546, 0, 251);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.1599999964237213, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame.TextLabel
+G2L["45"] = Instance.new("TextLabel", G2L["44"]);
+G2L["45"]["TextWrapped"] = true;
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["TextScaled"] = true;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["45"]["TextSize"] = 14;
+G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["45"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Text"] = [[More Coming Soon!]];
+G2L["45"]["BackgroundTransparency"] = 1;
+G2L["45"]["Position"] = UDim2.new(0.027561398223042488, 0, 0.5633942484855652, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame.TextLabel
+G2L["46"] = Instance.new("TextLabel", G2L["44"]);
+G2L["46"]["TextWrapped"] = true;
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["TextScaled"] = true;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["46"]["TextSize"] = 14;
+G2L["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Text"] = [[Player Modifier]];
+G2L["46"]["BackgroundTransparency"] = 1;
+G2L["46"]["Position"] = UDim2.new(-0.23617486655712128, 0, -0.007812743075191975, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton
+G2L["47"] = Instance.new("TextButton", G2L["44"]);
+G2L["47"]["TextWrapped"] = true;
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["RichText"] = true;
+G2L["47"]["TextScaled"] = true;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(60, 60, 60);
+G2L["47"]["TextSize"] = 14;
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["47"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["Size"] = UDim2.new(0, 150, 0, 36);
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Text"] = [[Walkspeed:]];
+G2L["47"]["Position"] = UDim2.new(0.02747252769768238, 0, 0.06960196048021317, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.UICorner
+G2L["48"] = Instance.new("UICorner", G2L["47"]);
+G2L["48"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextBox
+G2L["49"] = Instance.new("TextBox", G2L["47"]);
+G2L["49"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["49"]["BorderSizePixel"] = 0;
+G2L["49"]["RichText"] = true;
+G2L["49"]["TextSize"] = 14;
+G2L["49"]["TextWrapped"] = true;
+G2L["49"]["TextScaled"] = true;
+G2L["49"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+G2L["49"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["49"]["PlaceholderText"] = [[0]];
+G2L["49"]["Size"] = UDim2.new(0, 107, 0, 32);
+G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["49"]["Text"] = [[]];
+G2L["49"]["Position"] = UDim2.new(0.9903548359870911, 0, 0.1111111119389534, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.TextBox.UICorner
+G2L["4a"] = Instance.new("UICorner", G2L["49"]);
+G2L["4a"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
+G2L["4b"] = Instance.new("LocalScript", G2L["47"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.TextButton
+G2L["4c"] = Instance.new("TextButton", G2L["41"]);
+G2L["4c"]["TextWrapped"] = true;
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["RichText"] = true;
+G2L["4c"]["TextScaled"] = true;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["4c"]["TextSize"] = 14;
+G2L["4c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4c"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["4c"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Text"] = [[X]];
+G2L["4c"]["Position"] = UDim2.new(0.6495224833488464, 0, -0.009999999776482582, 0);
+G2L["4c"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.TextButton.LocalScript
+G2L["4d"] = Instance.new("LocalScript", G2L["4c"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm
+G2L["4e"] = Instance.new("Frame", G2L["36"]);
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["BackgroundTransparency"] = 1;
+G2L["4e"]["Size"] = UDim2.new(0, 545, 0, 300);
+G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["Visible"] = false;
+G2L["4e"]["Name"] = [[Autofarm]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.TextLabel
+G2L["4f"] = Instance.new("TextLabel", G2L["4e"]);
+G2L["4f"]["TextWrapped"] = true;
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextScaled"] = true;
+G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["4f"]["TextSize"] = 14;
+G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4f"]["Text"] = [[Autofarm 🔁]];
+G2L["4f"]["BackgroundTransparency"] = 1;
+G2L["4f"]["Position"] = UDim2.new(0.315596342086792, 0, -0.013333333656191826, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.Divider
+G2L["50"] = Instance.new("Frame", G2L["4e"]);
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.15333333611488342, 0);
+G2L["50"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame
+G2L["51"] = Instance.new("ScrollingFrame", G2L["4e"]);
+G2L["51"]["Active"] = true;
+G2L["51"]["BorderSizePixel"] = 0;
+G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["51"]["BackgroundTransparency"] = 1;
+G2L["51"]["Size"] = UDim2.new(0, 546, 0, 251);
+G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["51"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.1599999964237213, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.TextLabel
+G2L["52"] = Instance.new("TextLabel", G2L["51"]);
+G2L["52"]["TextWrapped"] = true;
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TextScaled"] = true;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["52"]["TextSize"] = 14;
+G2L["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Text"] = [[AutoFarm Settings]];
+G2L["52"]["BackgroundTransparency"] = 1;
+G2L["52"]["Position"] = UDim2.new(-0.16108329594135284, 0, 0.31015074253082275, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.Divider
+G2L["53"] = Instance.new("Frame", G2L["51"]);
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Position"] = UDim2.new(0.010962182655930519, 0, 0.2972758710384369, 0);
+G2L["53"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.Divider
+G2L["54"] = Instance.new("Frame", G2L["51"]);
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["Position"] = UDim2.new(-0.020173348486423492, 0, 0.3849252760410309, 0);
+G2L["54"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.TextLabel
+G2L["55"] = Instance.new("TextLabel", G2L["51"]);
+G2L["55"]["TextWrapped"] = true;
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextScaled"] = true;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["55"]["TextSize"] = 14;
+G2L["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["Text"] = [[Enable/disable gold AF]];
+G2L["55"]["BackgroundTransparency"] = 1;
+G2L["55"]["Position"] = UDim2.new(-0.13910527527332306, 0, -0.0027396518271416426, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.Divider
+G2L["56"] = Instance.new("Frame", G2L["51"]);
+G2L["56"]["BorderSizePixel"] = 0;
+G2L["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["56"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["56"]["Position"] = UDim2.new(0.010962182655930519, 0, 0.06918541342020035, 0);
+G2L["56"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.Enableordisablebutton
+G2L["57"] = Instance.new("TextButton", G2L["51"]);
+G2L["57"]["TextWrapped"] = true;
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["RichText"] = true;
+G2L["57"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["57"]["TextTransparency"] = 0.11999999731779099;
+G2L["57"]["TextScaled"] = true;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(66, 66, 66);
+G2L["57"]["TextSize"] = 14;
+G2L["57"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["57"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["Size"] = UDim2.new(0, 367, 0, 50);
+G2L["57"]["Name"] = [[Enableordisablebutton]];
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["Text"] = [[Enabled:❌ ]];
+G2L["57"]["Position"] = UDim2.new(0.010989011265337467, 0, 0.13089536130428314, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.Enableordisablebutton.UICorner
+G2L["58"] = Instance.new("UICorner", G2L["57"]);
+G2L["58"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.Enableordisablebutton.DisabledHandeler
+G2L["59"] = Instance.new("LocalScript", G2L["57"]);
+G2L["59"]["Name"] = [[DisabledHandeler]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.Enableordisablebutton.EnabledHandeler
+G2L["5a"] = Instance.new("LocalScript", G2L["57"]);
+G2L["5a"]["Enabled"] = false;
+G2L["5a"]["Disabled"] = true;
+G2L["5a"]["Name"] = [[EnabledHandeler]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.TextButton
+G2L["5b"] = Instance.new("TextButton", G2L["4e"]);
+G2L["5b"]["TextWrapped"] = true;
+G2L["5b"]["BorderSizePixel"] = 0;
+G2L["5b"]["RichText"] = true;
+G2L["5b"]["TextScaled"] = true;
+G2L["5b"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["5b"]["TextSize"] = 14;
+G2L["5b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5b"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["5b"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["5b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5b"]["Text"] = [[X]];
+G2L["5b"]["Position"] = UDim2.new(0.6825500130653381, 0, -0.009999999776482582, 0);
+G2L["5b"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.TextButton.LocalScript
+G2L["5c"] = Instance.new("LocalScript", G2L["5b"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.LocalScript
+G2L["5d"] = Instance.new("LocalScript", G2L["4e"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports
+G2L["5e"] = Instance.new("Frame", G2L["36"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["BackgroundTransparency"] = 1;
+G2L["5e"]["Size"] = UDim2.new(0, 545, 0, 300);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Name"] = [[Teleports]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.TextLabel
+G2L["5f"] = Instance.new("TextLabel", G2L["5e"]);
+G2L["5f"]["TextWrapped"] = true;
+G2L["5f"]["BorderSizePixel"] = 0;
+G2L["5f"]["TextScaled"] = true;
+G2L["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["5f"]["TextSize"] = 14;
+G2L["5f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5f"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5f"]["Text"] = [[Teleports 🌀🚀]];
+G2L["5f"]["BackgroundTransparency"] = 1;
+G2L["5f"]["Position"] = UDim2.new(0.315596342086792, 0, -0.009999999776482582, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.Divider
+G2L["60"] = Instance.new("Frame", G2L["5e"]);
+G2L["60"]["BorderSizePixel"] = 0;
+G2L["60"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["60"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["60"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["60"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.15333333611488342, 0);
+G2L["60"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame
+G2L["61"] = Instance.new("ScrollingFrame", G2L["5e"]);
+G2L["61"]["Active"] = true;
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["BackgroundTransparency"] = 1;
+G2L["61"]["Size"] = UDim2.new(0, 546, 0, 251);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.1599999964237213, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.Divider
+G2L["62"] = Instance.new("Frame", G2L["61"]);
+G2L["62"]["BorderSizePixel"] = 0;
+G2L["62"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["62"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["62"]["Position"] = UDim2.new(0.010962182655930519, 0, 0.2972758710384369, 0);
+G2L["62"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.Divider
+G2L["63"] = Instance.new("Frame", G2L["61"]);
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Position"] = UDim2.new(-0.020173348486423492, 0, 0.3849252760410309, 0);
+G2L["63"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextLabel
+G2L["64"] = Instance.new("TextLabel", G2L["61"]);
+G2L["64"]["TextWrapped"] = true;
+G2L["64"]["BorderSizePixel"] = 0;
+G2L["64"]["TextScaled"] = true;
+G2L["64"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["64"]["TextSize"] = 14;
+G2L["64"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["64"]["Text"] = [[If you teleport to something and dont see it,  it may have been picked up already and there is a chance you will teleport to something you did not want to]];
+G2L["64"]["BackgroundTransparency"] = 1;
+G2L["64"]["Position"] = UDim2.new(0.027561398223042488, 0, 0.5633942484855652, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextButton
+G2L["65"] = Instance.new("TextButton", G2L["61"]);
+G2L["65"]["TextWrapped"] = true;
+G2L["65"]["BorderSizePixel"] = 0;
+G2L["65"]["TextScaled"] = true;
+G2L["65"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["TextSize"] = 14;
+G2L["65"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["65"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["65"]["Size"] = UDim2.new(0, 175, 0, 29);
+G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["65"]["Text"] = [[Exit Door]];
+G2L["65"]["Position"] = UDim2.new(0.009157509543001652, 0, 0.47434723377227783, 0);
+G2L["65"]["BackgroundTransparency"] = 0.800000011920929;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextButton.UICorner
+G2L["66"] = Instance.new("UICorner", G2L["65"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextButton.LocalScript
+G2L["67"] = Instance.new("LocalScript", G2L["65"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.Divider
+G2L["68"] = Instance.new("Frame", G2L["61"]);
+G2L["68"]["BorderSizePixel"] = 0;
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["68"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"]["Position"] = UDim2.new(-0.011015839874744415, 0, 0.5536062717437744, 0);
+G2L["68"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.Divider
+G2L["69"] = Instance.new("Frame", G2L["61"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["Position"] = UDim2.new(-0.011015839874744415, 0, 0.6381025910377502, 0);
+G2L["69"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextButton
+G2L["6a"] = Instance.new("TextButton", G2L["61"]);
+G2L["6a"]["TextWrapped"] = true;
+G2L["6a"]["BorderSizePixel"] = 0;
+G2L["6a"]["TextScaled"] = true;
+G2L["6a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["TextSize"] = 14;
+G2L["6a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["6a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6a"]["Size"] = UDim2.new(0, 175, 0, 29);
+G2L["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6a"]["Text"] = [[LivingRoom]];
+G2L["6a"]["Position"] = UDim2.new(0.36263737082481384, 0, 0.39510196447372437, 0);
+G2L["6a"]["BackgroundTransparency"] = 0.800000011920929;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextButton.UICorner
+G2L["6b"] = Instance.new("UICorner", G2L["6a"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextButton.LocalScript
+G2L["6c"] = Instance.new("LocalScript", G2L["6a"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.TextButton
+G2L["6d"] = Instance.new("TextButton", G2L["5e"]);
+G2L["6d"]["TextWrapped"] = true;
+G2L["6d"]["BorderSizePixel"] = 0;
+G2L["6d"]["RichText"] = true;
+G2L["6d"]["TextScaled"] = true;
+G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["6d"]["TextSize"] = 14;
+G2L["6d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["6d"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["6d"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6d"]["Text"] = [[X]];
+G2L["6d"]["Position"] = UDim2.new(0.6495224833488464, 0, -0.009999999776482582, 0);
+G2L["6d"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.TextButton.LocalScript
+G2L["6e"] = Instance.new("LocalScript", G2L["6d"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.LocalScript
+G2L["6f"] = Instance.new("LocalScript", G2L["5e"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra
+G2L["70"] = Instance.new("Frame", G2L["36"]);
+G2L["70"]["BorderSizePixel"] = 0;
+G2L["70"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["70"]["BackgroundTransparency"] = 1;
+G2L["70"]["Size"] = UDim2.new(0, 545, 0, 300);
+G2L["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["70"]["Visible"] = false;
+G2L["70"]["Name"] = [[Extra]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.TextLabel
+G2L["71"] = Instance.new("TextLabel", G2L["70"]);
+G2L["71"]["TextWrapped"] = true;
+G2L["71"]["BorderSizePixel"] = 0;
+G2L["71"]["TextScaled"] = true;
+G2L["71"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["71"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["71"]["TextSize"] = 14;
+G2L["71"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["71"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["71"]["Text"] = [[Player 🧑]];
+G2L["71"]["BackgroundTransparency"] = 1;
+G2L["71"]["Position"] = UDim2.new(0.315596342086792, 0, -0.009999999776482582, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.Divider
+G2L["72"] = Instance.new("Frame", G2L["70"]);
+G2L["72"]["BorderSizePixel"] = 0;
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["72"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.15333333611488342, 0);
+G2L["72"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.ScrollingFrame
+G2L["73"] = Instance.new("ScrollingFrame", G2L["70"]);
+G2L["73"]["Active"] = true;
+G2L["73"]["BorderSizePixel"] = 0;
+G2L["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["73"]["BackgroundTransparency"] = 1;
+G2L["73"]["Size"] = UDim2.new(0, 546, 0, 251);
+G2L["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["73"]["Position"] = UDim2.new(-0.0018348623998463154, 0, 0.1599999964237213, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.ScrollingFrame.TextLabel
+G2L["74"] = Instance.new("TextLabel", G2L["73"]);
+G2L["74"]["TextWrapped"] = true;
+G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["TextScaled"] = true;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["74"]["TextSize"] = 14;
+G2L["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Text"] = [[Player Settings]];
+G2L["74"]["BackgroundTransparency"] = 1;
+G2L["74"]["Position"] = UDim2.new(-0.24166937172412872, 0, 0.30506500601768494, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.ScrollingFrame.Divider
+G2L["75"] = Instance.new("Frame", G2L["73"]);
+G2L["75"]["BorderSizePixel"] = 0;
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Position"] = UDim2.new(0.010962182655930519, 0, 0.2972758710384369, 0);
+G2L["75"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.ScrollingFrame.Divider
+G2L["76"] = Instance.new("Frame", G2L["73"]);
+G2L["76"]["BorderSizePixel"] = 0;
+G2L["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["Size"] = UDim2.new(0, 546, 0, 2);
+G2L["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["76"]["Position"] = UDim2.new(-0.020173348486423492, 0, 0.3849252760410309, 0);
+G2L["76"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.ScrollingFrame.TextLabel
+G2L["77"] = Instance.new("TextLabel", G2L["73"]);
+G2L["77"]["TextWrapped"] = true;
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextScaled"] = true;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["77"]["TextSize"] = 14;
+G2L["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Text"] = [[More Coming Soon!]];
+G2L["77"]["BackgroundTransparency"] = 1;
+G2L["77"]["Position"] = UDim2.new(0.027561398223042488, 0, 0.5633942484855652, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.ScrollingFrame.TextLabel
+G2L["78"] = Instance.new("TextLabel", G2L["73"]);
+G2L["78"]["TextWrapped"] = true;
+G2L["78"]["BorderSizePixel"] = 0;
+G2L["78"]["TextScaled"] = true;
+G2L["78"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["78"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["78"]["TextSize"] = 14;
+G2L["78"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["78"]["Size"] = UDim2.new(0, 493, 0, 41);
+G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["78"]["Text"] = [[Player Modifier]];
+G2L["78"]["BackgroundTransparency"] = 1;
+G2L["78"]["Position"] = UDim2.new(-0.23617486655712128, 0, -0.007812743075191975, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.TextButton
+G2L["79"] = Instance.new("TextButton", G2L["70"]);
+G2L["79"]["TextWrapped"] = true;
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["RichText"] = true;
+G2L["79"]["TextScaled"] = true;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["79"]["TextSize"] = 14;
+G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["79"]["TextColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["79"]["Size"] = UDim2.new(0, 59, 0, 46);
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Text"] = [[X]];
+G2L["79"]["Position"] = UDim2.new(0.6495224833488464, 0, -0.009999999776482582, 0);
+G2L["79"]["BackgroundTransparency"] = 1;
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.TextButton.LocalScript
+G2L["7a"] = Instance.new("LocalScript", G2L["79"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.LocalScript
+G2L["7b"] = Instance.new("LocalScript", G2L["70"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.UICorner
+G2L["7c"] = Instance.new("UICorner", G2L["18"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Divider
+G2L["7d"] = Instance.new("Frame", G2L["18"]);
+G2L["7d"]["BorderSizePixel"] = 0;
+G2L["7d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7d"]["Size"] = UDim2.new(0, 2, 0, 306);
+G2L["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7d"]["Position"] = UDim2.new(0.2018253207206726, 0, 0.12994350492954254, 0);
+G2L["7d"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Divider
+G2L["7e"] = Instance.new("Frame", G2L["18"]);
+G2L["7e"]["BorderSizePixel"] = 0;
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7e"]["Size"] = UDim2.new(0, -2, 0, 346);
+G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["Position"] = UDim2.new(1, 0, 0.02259887009859085, 0);
+G2L["7e"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.Divider
+G2L["7f"] = Instance.new("Frame", G2L["18"]);
+G2L["7f"]["BorderSizePixel"] = 0;
+G2L["7f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7f"]["Size"] = UDim2.new(0, 2, 0, 346);
+G2L["7f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7f"]["Position"] = UDim2.new(-0.0013910483103245497, 0, 0.02259887009859085, 0);
+G2L["7f"]["Name"] = [[Divider]];
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ImageLabel
+G2L["80"] = Instance.new("ImageLabel", G2L["18"]);
+G2L["80"]["BorderSizePixel"] = 0;
+G2L["80"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["80"]["Image"] = [[http://www.roblox.com/asset/?id=5437326431]];
+G2L["80"]["Size"] = UDim2.new(0, 56, 0, 49);
+G2L["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["80"]["Position"] = UDim2.new(0.05847953259944916, 0, 0.7033898234367371, 0);
+
+-- StarterGui.CarryMe!.Zenoz.Frame.ImageLabel.UICorner
+G2L["81"] = Instance.new("UICorner", G2L["80"]);
+G2L["81"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+G2L["82"] = Instance.new("LocalScript", G2L["17"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.Ding~
+G2L["83"] = Instance.new("Sound", G2L["17"]);
+G2L["83"]["Name"] = [[Ding~]];
+G2L["83"]["SoundId"] = [[rbxassetid://9068539820]];
+
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+G2L["84"] = Instance.new("LocalScript", G2L["17"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+G2L["85"] = Instance.new("LocalScript", G2L["17"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+G2L["86"] = Instance.new("LocalScript", G2L["17"]);
+
+
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+G2L["87"] = Instance.new("LocalScript", G2L["17"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz
+G2L["88"] = Instance.new("ScreenGui", G2L["1"]);
+G2L["88"]["Name"] = [[ColumZenoz]];
+G2L["88"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz
+G2L["89"] = Instance.new("Frame", G2L["88"]);
+G2L["89"]["BorderSizePixel"] = 0;
+G2L["89"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["89"]["BackgroundTransparency"] = 1;
+G2L["89"]["Size"] = UDim2.new(0, 100, 0, 100);
+G2L["89"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["89"]["Position"] = UDim2.new(0.45284780859947205, 0, 0.420634925365448, 0);
+G2L["89"]["Visible"] = false;
+G2L["89"]["Name"] = [[Buzzzz]];
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players
+G2L["8a"] = Instance.new("Frame", G2L["89"]);
+G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["8a"]["Size"] = UDim2.new(0, 139, 0, 154);
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Position"] = UDim2.new(-4.349940299987793, 0, -2.4960317611694336, 0);
+G2L["8a"]["Name"] = [[Players]];
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.UICorner
+G2L["8b"] = Instance.new("UICorner", G2L["8a"]);
+G2L["8b"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.Walkspeed
+G2L["8c"] = Instance.new("TextButton", G2L["8a"]);
+G2L["8c"]["TextWrapped"] = true;
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["TextScaled"] = true;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["8c"]["TextSize"] = 20;
+G2L["8c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["8c"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Size"] = UDim2.new(0, 71, 0, 30);
+G2L["8c"]["Name"] = [[Walkspeed]];
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Text"] = [[Change Walkspeed]];
+G2L["8c"]["Position"] = UDim2.new(0.04500618204474449, 0, 0.5105012059211731, 0);
+G2L["8c"]["BackgroundTransparency"] = -0.10999999940395355;
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.Walkspeed.UICorner
+G2L["8d"] = Instance.new("UICorner", G2L["8c"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.Walkspeed.LocalScript
+G2L["8e"] = Instance.new("LocalScript", G2L["8c"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.Walkspeed.InsertBox
+G2L["8f"] = Instance.new("TextBox", G2L["8c"]);
+G2L["8f"]["BorderSizePixel"] = 2;
+G2L["8f"]["TextSize"] = 14;
+G2L["8f"]["TextWrapped"] = true;
+G2L["8f"]["TextScaled"] = true;
+G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["8f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["8f"]["PlaceholderText"] = [[Insert Here]];
+G2L["8f"]["Size"] = UDim2.new(0, 52, 0, 33);
+G2L["8f"]["BorderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["Text"] = [[]];
+G2L["8f"]["Position"] = UDim2.new(1.1126760244369507, 0, -0.07545267790555954, 0);
+G2L["8f"]["Name"] = [[InsertBox]];
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.LocalScript
+G2L["90"] = Instance.new("LocalScript", G2L["8a"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.PlayerTopBar
+G2L["91"] = Instance.new("Frame", G2L["8a"]);
+G2L["91"]["BorderSizePixel"] = 0;
+G2L["91"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
+G2L["91"]["Size"] = UDim2.new(0, 139, 0, 39);
+G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["91"]["Position"] = UDim2.new(-0.004993905313313007, 0, 0.00516594247892499, 0);
+G2L["91"]["Name"] = [[PlayerTopBar]];
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.PlayerTopBar.UICorner
+G2L["92"] = Instance.new("UICorner", G2L["91"]);
+G2L["92"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.PlayerTopBar.TextLabel
+G2L["93"] = Instance.new("TextLabel", G2L["91"]);
+G2L["93"]["TextWrapped"] = true;
+G2L["93"]["BorderSizePixel"] = 0;
+G2L["93"]["TextScaled"] = true;
+G2L["93"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["93"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["93"]["TextSize"] = 14;
+G2L["93"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["93"]["Size"] = UDim2.new(0, 86, 0, 26);
+G2L["93"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["93"]["Text"] = [[Player]];
+G2L["93"]["BackgroundTransparency"] = 1;
+G2L["93"]["Position"] = UDim2.new(0.1901433914899826, 0, 0.05023369565606117, 0);
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.LocalScript
+G2L["94"] = Instance.new("LocalScript", G2L["8a"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports
+G2L["95"] = Instance.new("Frame", G2L["89"]);
+G2L["95"]["BorderSizePixel"] = 0;
+G2L["95"]["BackgroundColor3"] = Color3.fromRGB(36, 36, 36);
+G2L["95"]["Size"] = UDim2.new(0, 139, 0, 375);
+G2L["95"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["95"]["Position"] = UDim2.new(-5.9259934425354, 0, -2.4960317611694336, 0);
+G2L["95"]["Name"] = [[Teleports]];
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.UICorner
+G2L["96"] = Instance.new("UICorner", G2L["95"]);
+G2L["96"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton
+G2L["97"] = Instance.new("TextButton", G2L["95"]);
+G2L["97"]["TextWrapped"] = true;
+G2L["97"]["BorderSizePixel"] = 0;
+G2L["97"]["TextScaled"] = true;
+G2L["97"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["97"]["TextSize"] = 20;
+G2L["97"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["97"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["97"]["Size"] = UDim2.new(0, 121, 0, 30);
+G2L["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["97"]["Text"] = [[Teleport To The End?]];
+G2L["97"]["Position"] = UDim2.new(0.05939467251300812, 0, 0.29215705394744873, 0);
+G2L["97"]["BackgroundTransparency"] = -0.10999999940395355;
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.UICorner
+G2L["98"] = Instance.new("UICorner", G2L["97"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+G2L["99"] = Instance.new("LocalScript", G2L["97"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton
+G2L["9a"] = Instance.new("TextButton", G2L["95"]);
+G2L["9a"]["TextWrapped"] = true;
+G2L["9a"]["BorderSizePixel"] = 0;
+G2L["9a"]["TextScaled"] = true;
+G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["9a"]["TextSize"] = 20;
+G2L["9a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9a"]["Size"] = UDim2.new(0, 121, 0, 32);
+G2L["9a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9a"]["Text"] = [[Teleport to the end]];
+G2L["9a"]["Position"] = UDim2.new(0.054998382925987244, 0, 0.4125123620033264, 0);
+G2L["9a"]["BackgroundTransparency"] = -0.10999999940395355;
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.UICorner
+G2L["9b"] = Instance.new("UICorner", G2L["9a"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+G2L["9c"] = Instance.new("LocalScript", G2L["9a"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton
+G2L["9d"] = Instance.new("TextButton", G2L["95"]);
+G2L["9d"]["TextWrapped"] = true;
+G2L["9d"]["BorderSizePixel"] = 0;
+G2L["9d"]["TextScaled"] = true;
+G2L["9d"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["9d"]["TextSize"] = 20;
+G2L["9d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9d"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9d"]["Size"] = UDim2.new(0, 121, 0, 32);
+G2L["9d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9d"]["Text"] = [[Teleport To Clarity]];
+G2L["9d"]["Position"] = UDim2.new(0.05025257170200348, 0, 0.7651276588439941, 0);
+G2L["9d"]["BackgroundTransparency"] = -0.10999999940395355;
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.UICorner
+G2L["9e"] = Instance.new("UICorner", G2L["9d"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+G2L["9f"] = Instance.new("LocalScript", G2L["9d"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton
+G2L["a0"] = Instance.new("TextButton", G2L["95"]);
+G2L["a0"]["TextWrapped"] = true;
+G2L["a0"]["BorderSizePixel"] = 0;
+G2L["a0"]["TextScaled"] = true;
+G2L["a0"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["a0"]["TextSize"] = 20;
+G2L["a0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a0"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a0"]["Size"] = UDim2.new(0, 122, 0, 33);
+G2L["a0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a0"]["Text"] = [[Teleport To Snow]];
+G2L["a0"]["Position"] = UDim2.new(0.056109312921762466, 0, 0.15997770428657532, 0);
+G2L["a0"]["BackgroundTransparency"] = -0.10999999940395355;
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.UICorner
+G2L["a1"] = Instance.new("UICorner", G2L["a0"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+G2L["a2"] = Instance.new("LocalScript", G2L["a0"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton
+G2L["a3"] = Instance.new("TextButton", G2L["95"]);
+G2L["a3"]["TextWrapped"] = true;
+G2L["a3"]["BorderSizePixel"] = 0;
+G2L["a3"]["TextScaled"] = true;
+G2L["a3"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["a3"]["TextSize"] = 20;
+G2L["a3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a3"]["Size"] = UDim2.new(0, 122, 0, 30);
+G2L["a3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a3"]["Text"] = [[Teleport To Jungle]];
+G2L["a3"]["Position"] = UDim2.new(0.0538611114025116, 0, 0.6440661549568176, 0);
+G2L["a3"]["BackgroundTransparency"] = -0.10999999940395355;
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.UICorner
+G2L["a4"] = Instance.new("UICorner", G2L["a3"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+G2L["a5"] = Instance.new("LocalScript", G2L["a3"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton
+G2L["a6"] = Instance.new("TextButton", G2L["95"]);
+G2L["a6"]["TextWrapped"] = true;
+G2L["a6"]["BorderSizePixel"] = 0;
+G2L["a6"]["TextScaled"] = true;
+G2L["a6"]["BackgroundColor3"] = Color3.fromRGB(0, 171, 255);
+G2L["a6"]["TextSize"] = 20;
+G2L["a6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a6"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a6"]["Size"] = UDim2.new(0, 122, 0, 31);
+G2L["a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a6"]["Text"] = [[Teleport To Spawn]];
+G2L["a6"]["Position"] = UDim2.new(0.051345497369766235, 0, 0.52726149559021, 0);
+G2L["a6"]["BackgroundTransparency"] = -0.10999999940395355;
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.UICorner
+G2L["a7"] = Instance.new("UICorner", G2L["a6"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+G2L["a8"] = Instance.new("LocalScript", G2L["a6"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.LocalScript
+G2L["a9"] = Instance.new("LocalScript", G2L["95"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TeleportTopBar
+G2L["aa"] = Instance.new("Frame", G2L["95"]);
+G2L["aa"]["BorderSizePixel"] = 0;
+G2L["aa"]["BackgroundColor3"] = Color3.fromRGB(54, 54, 54);
+G2L["aa"]["Size"] = UDim2.new(0, 139, 0, 39);
+G2L["aa"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["aa"]["Position"] = UDim2.new(-0.0006746251019649208, 0, 0.009333333000540733, 0);
+G2L["aa"]["Name"] = [[TeleportTopBar]];
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TeleportTopBar.UICorner
+G2L["ab"] = Instance.new("UICorner", G2L["aa"]);
+G2L["ab"]["CornerRadius"] = UDim.new(0, 9);
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TeleportTopBar.TextLabel
+G2L["ac"] = Instance.new("TextLabel", G2L["aa"]);
+G2L["ac"]["TextWrapped"] = true;
+G2L["ac"]["BorderSizePixel"] = 0;
+G2L["ac"]["TextScaled"] = true;
+G2L["ac"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ac"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["ac"]["TextSize"] = 14;
+G2L["ac"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ac"]["Size"] = UDim2.new(0, 164, 0, 26);
+G2L["ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ac"]["Text"] = [[Teleports]];
+G2L["ac"]["BackgroundTransparency"] = 1;
+G2L["ac"]["Position"] = UDim2.new(-0.2487056404352188, 0, 0.1015157476067543, 0);
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Thanks
+G2L["ad"] = Instance.new("Frame", G2L["89"]);
+G2L["ad"]["BorderSizePixel"] = 0;
+G2L["ad"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["ad"]["Size"] = UDim2.new(0, 400, 0, 67);
+G2L["ad"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ad"]["Position"] = UDim2.new(3.425309419631958, 0, 2.9735283851623535, 0);
+G2L["ad"]["Name"] = [[Thanks]];
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Thanks.UICorner
+G2L["ae"] = Instance.new("UICorner", G2L["ad"]);
+G2L["ae"]["CornerRadius"] = UDim.new(1, 0);
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Thanks.TextLabel
+G2L["af"] = Instance.new("TextLabel", G2L["ad"]);
+G2L["af"]["TextWrapped"] = true;
+G2L["af"]["BorderSizePixel"] = 0;
+G2L["af"]["RichText"] = true;
+G2L["af"]["TextScaled"] = true;
+G2L["af"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["af"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["af"]["TextSize"] = 14;
+G2L["af"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["af"]["Size"] = UDim2.new(0, 359, 0, 58);
+G2L["af"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["af"]["Text"] = [[Loaded! thanks for using!]];
+G2L["af"]["BackgroundTransparency"] = 1;
+G2L["af"]["Position"] = UDim2.new(0.05000000074505806, 0, 0.05970149114727974, 0);
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Thanks.LocalScript
+G2L["b0"] = Instance.new("LocalScript", G2L["ad"]);
+
+
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.TextLabel
+G2L["b1"] = Instance.new("TextLabel", G2L["89"]);
+G2L["b1"]["TextWrapped"] = true;
+G2L["b1"]["BorderSizePixel"] = 0;
+G2L["b1"]["RichText"] = true;
+G2L["b1"]["TextScaled"] = true;
+G2L["b1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b1"]["TextSize"] = 14;
+G2L["b1"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b1"]["Size"] = UDim2.new(0, 182, 0, 37);
+G2L["b1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b1"]["Text"] = [[Zenoz | discord: lllouis]];
+G2L["b1"]["BackgroundTransparency"] = 1;
+G2L["b1"]["Position"] = UDim2.new(-6.110419750213623, 0, 3.2612695693969727, 0);
+
+-- StarterGui.CarryMe!.Keysystem.TextButton.LocalScript
+local function C_7()
+local script = G2L["7"];
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.TextBox.Text == ("FEIOFJEILOZ@3LSKKDEEZEN@OZISQAWWCMSISAIB@SAQGTA!22") then
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.1
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.2
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.3
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.4
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.5
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.6
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.7
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.8
+			wait(0.5)
+			script.Parent.Parent.Transparency = 0.9
+			wait(0.5)
+			script.Parent.Parent.Transparency = 1
+			wait(0.5)
+			script.Parent.Parent.Visible = false
+			script.Parent.Parent.Parent.ColumZenoz.Buzzzz.Visible = true
+		end
+	end)
+end;
+task.spawn(C_7);
+-- StarterGui.CarryMe!.Keysystem.TextButton.LocalScript
+local function C_a()
+local script = G2L["a"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.KeyLink.Visible = true
+	end)
+end;
+task.spawn(C_a);
+-- StarterGui.CarryMe!.Keysystem.LocalScript
+local function C_f()
+local script = G2L["f"];
+	wait(1)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Just Letting you know";
+		Text = "Keysystem has loaded! please compleat for the script.";
+		image = "http://www.roblox.com/asset/?id=12388264636";
+		Duration = "4";
+	})
+	script.Parent["Ding~"]:Play()
+	wait(3)
+	script.Parent["Ding~"]:Destroy()
+	wait(3)
+end;
+task.spawn(C_f);
+-- StarterGui.CarryMe!.Keysystem.Frame.LocalScript
+local function C_14()
+local script = G2L["14"];
+	local frame = script.Parent.Parent
+	
+	frame.Draggable = true
+	frame.Selectable = true
+	frame.Active = true
+end;
+task.spawn(C_14);
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.TextButton.LocalScript
+local function C_1b()
+local script = G2L["1b"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.Enabled = false
+		wait(2)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Just Letting you know";
+			Text = "Press -> P <- to open the Gui Again";
+			Duration = "4";
+		})
+	end)
+end;
+task.spawn(C_1b);
+-- StarterGui.CarryMe!.Zenoz.Frame.DragBar.LocalScript
+local function C_1e()
+local script = G2L["1e"];
+	frame = script.Parent.Parent
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end;
+task.spawn(C_1e);
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.LocalScript
+local function C_27()
+local script = G2L["27"];
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.Parent.Display.Teleports.Visible == true or script.Parent.Parent.Parent.Display.Game.Visible == true or script.Parent.Parent.Parent.Display.Extra.Visible == true or script.Parent.Parent.Parent.Display.Autofarm.Visible == true then
+			script.Parent.Parent.Parent.Display.Player.Visible = false
+		else
+			if script.Parent.Parent.Parent.Display.Teleports.Visible == false or script.Parent.Parent.Parent.Display.Game.Visible == false or script.Parent.Parent.Parent.Display.Extra.Visible == false or script.Parent.Parent.Parent.Display.Autofarm.Visible == false then
+				script.Parent.Parent.Parent.Display.Player.Visible = true
+			end
+		end
+	end)
+end;
+task.spawn(C_27);
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.LocalScript
+local function C_2a()
+local script = G2L["2a"];
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.Parent.Display.Player.Visible == true or script.Parent.Parent.Parent.Display.Teleports.Visible == true or script.Parent.Parent.Parent.Display.Extra.Visible == true or script.Parent.Parent.Parent.Display.Autofarm.Visible == true then
+			script.Parent.Parent.Parent.Display.Game.Visible = false
+		else
+			if script.Parent.Parent.Parent.Display.Player.Visible == false or script.Parent.Parent.Parent.Display.Teleports.Visible == false or script.Parent.Parent.Parent.Display.Extra.Visible == false or script.Parent.Parent.Parent.Display.Autofarm.Visible == false then
+				script.Parent.Parent.Parent.Display.Game.Visible = true
+			end
+		end
+	end)
+end;
+task.spawn(C_2a);
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.LocalScript
+local function C_2e()
+local script = G2L["2e"];
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.Parent.Display.Player.Visible == true or script.Parent.Parent.Parent.Display.Game.Visible == true or script.Parent.Parent.Parent.Display.Extra.Visible == true or script.Parent.Parent.Parent.Display.Teleports.Visible == true then
+			script.Parent.Parent.Parent.Display.Autofarm.Visible = false
+		else
+			if script.Parent.Parent.Parent.Display.Player.Visible == false or script.Parent.Parent.Parent.Display.Game.Visible == false or script.Parent.Parent.Parent.Display.Extra.Visible == false or script.Parent.Parent.Parent.Display.Teleports.Visible == false then
+				script.Parent.Parent.Parent.Display.Autofarm.Visible = true
+			end
+		end
+	end)
+end;
+task.spawn(C_2e);
+-- StarterGui.CarryMe!.Zenoz.Frame.ListBox.TextButton.LocalScript
+local function C_31()
+local script = G2L["31"];
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.Parent.Display.Player.Visible == true or script.Parent.Parent.Parent.Display.Game.Visible == true or script.Parent.Parent.Parent.Display.Extra.Visible == true or script.Parent.Parent.Parent.Display.Autofarm.Visible == true then
+			script.Parent.Parent.Parent.Display.Teleports.Visible = false
+		else
+			if script.Parent.Parent.Parent.Display.Player.Visible == false or script.Parent.Parent.Parent.Display.Game.Visible == false or script.Parent.Parent.Parent.Display.Extra.Visible == false or script.Parent.Parent.Parent.Display.Autofarm.Visible == false then
+				script.Parent.Parent.Parent.Display.Teleports.Visible = true
+			end
+		end
+	end)
+end;
+task.spawn(C_31);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.TextButton.LocalScript
+local function C_3f()
+local script = G2L["3f"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible =false
+	end)
+end;
+task.spawn(C_3f);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Game.LocalScript
+local function C_40()
+local script = G2L["40"];
+	if script.Parent.Parent.Player.Visible == true then
+		script.Parent.Visible = false
+	end
+end;
+task.spawn(C_40);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.ScrollingFrame.TextButton.LocalScript
+local function C_4b()
+local script = G2L["4b"];
+	local player = game.Players.LocalPlayer
+	local textButton = script.Parent -- Reference to the TextButton
+	local textBox = script.Parent.TextBox -- Reference to the TextBox
+	
+	textButton.Activated:Connect(function()
+		local newWalkspeed = tonumber(textBox.Text) -- Convert the textbox input to a number
+	
+		if newWalkspeed then
+			player.Character:WaitForChild("Humanoid").WalkSpeed = newWalkspeed
+		else
+			print("Invalid input. Please enter a valid number.")
+		end
+	end)
+	
+end;
+task.spawn(C_4b);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Player.TextButton.LocalScript
+local function C_4d()
+local script = G2L["4d"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible =false
+	end)
+end;
+task.spawn(C_4d);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.ScrollingFrame.Enableordisablebutton.DisabledHandeler
+local function C_59()
+local script = G2L["59"];
+	if script.Enabled == true then
+		script.Parent.Text = ("Enabled:❌")
+		script.Parent.EnabledHandeler.Enabled = false
+	end
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Text = ("Enabled:✅")
+		script.Parent.EnabledHandeler.Enabled = true
+		script.Enabled = false
+		end)
+end;
+task.spawn(C_59);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.TextButton.LocalScript
+local function C_5c()
+local script = G2L["5c"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible =false
+	end)
+end;
+task.spawn(C_5c);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Autofarm.LocalScript
+local function C_5d()
+local script = G2L["5d"];
+	if script.Parent.Parent.Game.Visible == true then
+		script.Parent.Visible = false
+	end
+end;
+task.spawn(C_5d);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextButton.LocalScript
+local function C_67()
+local script = G2L["67"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.Map01_Cabin.DockGate.DockDoorSystem.DockDoor.HumanoidRootPart
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_67);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.ScrollingFrame.TextButton.LocalScript
+local function C_6c()
+local script = G2L["6c"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.Map01_Cabin.CABIN.FirePlace.Opening.Union
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_6c);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.TextButton.LocalScript
+local function C_6e()
+local script = G2L["6e"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible =false
+	end)
+end;
+task.spawn(C_6e);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Teleports.LocalScript
+local function C_6f()
+local script = G2L["6f"];
+	if script.Parent.Parent.Game.Visible == true then
+		script.Parent.Visible = false
+	end
+end;
+task.spawn(C_6f);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.TextButton.LocalScript
+local function C_7a()
+local script = G2L["7a"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible =false
+	end)
+end;
+task.spawn(C_7a);
+-- StarterGui.CarryMe!.Zenoz.Frame.Display.Extra.LocalScript
+local function C_7b()
+local script = G2L["7b"];
+	if script.Parent.Parent.Game.Visible == true then
+		script.Parent.Visible = false
+	end
+end;
+task.spawn(C_7b);
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+local function C_82()
+local script = G2L["82"];
+	local UserInputService = game:GetService("UserInputService")
+	local gui = script.Parent -- Reference to the ScreenGui
+	
+	local function onKeyPress(input, gameProcessedEvent)
+		if not gameProcessedEvent and input.KeyCode == Enum.KeyCode.P then
+			gui.Enabled = not gui.Enabled -- Toggle GUI visibility
+		end
+	end
+	
+	UserInputService.InputBegan:Connect(onKeyPress)
+	
+end;
+task.spawn(C_82);
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+local function C_84()
+local script = G2L["84"];
+	
+end;
+task.spawn(C_84);
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+local function C_85()
+local script = G2L["85"];
+	if script.Parent.Frame.Visible == true then
+	script.Parent.Frame.Transparency = 1
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.9
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.8
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.7
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.6
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.5
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.4
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.3
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.2
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0.1
+	wait(0.6)
+	script.Parent.Frame.Transparency = 0
+		end
+	
+end;
+task.spawn(C_85);
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+local function C_86()
+local script = G2L["86"];
+	local guiName = "Spider" -- Replace with your GUI's name
+	
+	local playerGui = game.Players.LocalPlayer.PlayerGui
+	
+	-- Check for existing instances of the GUI
+	local existingGUI = playerGui:FindFirstChild(guiName)
+	
+	-- Destroy old GUI instances (excluding the one just created)
+	for _, guiInstance in ipairs(playerGui:GetChildren()) do
+		if guiInstance.Name == guiName and guiInstance ~= existingGUI then
+			guiInstance:Destroy()
+		end
+	end
+	
+	-- Create and show your new GUI instance here
+	-- For example, you can use the code to create a new GUI
+	
+end;
+task.spawn(C_86);
+-- StarterGui.CarryMe!.Zenoz.LocalScript
+local function C_87()
+local script = G2L["87"];
+	if script.Parent.Parent.Destroying then
+		script.Parent.Parent:Clone()
+	end
+end;
+task.spawn(C_87);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.Walkspeed.LocalScript
+local function C_8e()
+local script = G2L["8e"];
+	local player = game.Players.LocalPlayer
+	local walkspeedTextbox = script.Parent.InsertBox
+	local changeSpeedButton = script.Parent -- Assuming the TextButton is also a child of the same parent object
+	
+	local function changeWalkspeed()
+		local newWalkspeedStr = walkspeedTextbox.Text
+		local newWalkspeed = tonumber(newWalkspeedStr)
+	
+		if newWalkspeed then
+			player.Character.Humanoid.WalkSpeed = newWalkspeed
+		else
+			print("Invalid walkspeed input")
+		end
+	end
+	
+	changeSpeedButton.MouseButton1Click:Connect(changeWalkspeed)
+	
+end;
+task.spawn(C_8e);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.LocalScript
+local function C_90()
+local script = G2L["90"];
+	local Frame = script.Parent
+	
+	Frame.Draggable = true
+	Frame.Active = true
+	Frame.Selectable = true
+end;
+task.spawn(C_90);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Players.LocalScript
+local function C_94()
+local script = G2L["94"];
+	if script.Parent.parent.Visible == true then
+	wait(1)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Just Letting you know";
+		Text = "If you encounter any problems just lmk in youtube comments or look at the bottem left of your screen and contact my discord";
+		image = "http://www.roblox.com/asset/?id=12388264636";
+		Duration = "4";
+	})
+	script.Parent["Ding~"]:Play()
+	wait(3)
+	script.Parent["Ding~"]:Destroy()
+	wait(3)
+		script:Destroy()
+		end
+end;
+task.spawn(C_94);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+local function C_99()
+local script = G2L["99"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.Checkpoints.checkpoint5
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_99);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+local function C_9c()
+local script = G2L["9c"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.Checkpoints.checkpoint6
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_9c);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+local function C_9f()
+local script = G2L["9f"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.Checkpoints.checkpoint4
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_9f);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+local function C_a2()
+local script = G2L["a2"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.Checkpoints.checkpoint3
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_a2);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+local function C_a5()
+local script = G2L["a5"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.Checkpoints.checkpoint2
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_a5);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.TextButton.LocalScript
+local function C_a8()
+local script = G2L["a8"];
+	local player = game.Players.LocalPlayer
+	local teleportPart = game.Workspace.Checkpoints.checkpoint1
+	local teleportButton = script.Parent -- Reference to the TextButton
+	
+	local function teleportToPart()
+		local character = player.Character
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+	
+		humanoidRootPart.CFrame = teleportPart.CFrame + Vector3.new(0, 5, 0)
+	end
+	
+	teleportButton.MouseButton1Click:Connect(teleportToPart)
+	
+end;
+task.spawn(C_a8);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Teleports.LocalScript
+local function C_a9()
+local script = G2L["a9"];
+	local Frame = script.Parent
+	
+	Frame.Draggable = true
+	Frame.Active = true
+	Frame.Selectable = true
+end;
+task.spawn(C_a9);
+-- StarterGui.CarryMe!.ColumZenoz.Buzzzz.Thanks.LocalScript
+local function C_b0()
+local script = G2L["b0"];
+	wait(4)
+	script.Parent:Destroy()
+end;
+task.spawn(C_b0);
+
+return G2L["1"], require;
